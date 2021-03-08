@@ -7,7 +7,8 @@ https://apps.apple.com/cn/app/id1555608867
 handle: 搜代码
 
 --过程
-新增 intf/iosSpiderMaster.jsp
+新增 intf/iosSpiderMaster.jsp (pcdlc)
+新增 IosSpiderMaster.java (gluttony)
 新增代码 System.out.println("appJson=" + appJson);
 断点查看ClientMasterSpider对象
 
