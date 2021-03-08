@@ -1,0 +1,16 @@
+--苹果软件发布 - 填写苹果软件信息
+https://dlc2.pconline.com.cn/developer/add_ios.jsp
+https://apps.apple.com/cn/app/id1555608867
+
+--页面出错提示
+同步App Store信息出错，请稍后重试！
+handle: 搜代码
+
+--过程
+新增 intf/iosSpiderMaster.jsp
+新增代码 System.out.println("appJson=" + appJson);
+断点查看ClientMasterSpider对象
+
+--解决
+publishUrl字段发生了变化
+publishUrl = objAttributes.getString("supportURLForLanguage");
