@@ -1,0 +1,30 @@
+--工单
+http://192.168.17.42/%E7%A4%BE%E7%BE%A4%E5%B7%A5%E5%85%B7v1.1/#id=4u8bkl&p=%E9%A2%86%E5%88%B8%E5%B7%A5%E5%85%B7%E9%A6%96%E9%A1%B5&g=1
+
+--淘宝联盟开放平台
+https://aff-open.taobao.com/#!/document
+
+--best
+https://best.pconline.com.cn/admin/login.jsp
+
+--cookie
+
+--代码
+$.ajax({url: "${best_spider_noprotocol}/api/tbk/search.do",
+      type: "GET",
+      dataType: "jsonp",
+      data: {"sourceUrl":sourceUrl, "adzoneId":adzoneId},
+      jsonp: "callback",
+      success: function(data){
+         if(data.code == 200){
+            $("#isRequired_shaiDan_source").val(data.source);
+            $("#wapSource").val(data.source);
+            $("#couponUrl").val(data.couponUrl);
+            $("#couponPrice").val(data.couponPrice);
+            $("#commissionRate").val(data.commissionRate / 100.0 + "%");
+         } else {
+            console.log(data);
+            alert("链接适配出错，错误代码：" + data.code);
+         }
+      }
+});
