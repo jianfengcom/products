@@ -7,7 +7,19 @@ https://aff-open.taobao.com/#!/document
 --best
 https://best.pconline.com.cn/admin/login.jsp
 
+--taobao.client.url
+application-disconf.yml
+
 --cookie
+
+--参考
+淘宝客-推广者-物料搜索
+taobao.tbk.dg.material.optional
+
+--
+https://bestspider.pconline.com.cn/api/tbk/search.do?callback=jQuery17209367860741632734_1615257628152&sourceUrl=https%3A%2F%2Fdetail.tmall.com%2Fitem.htm%3Fid%3D561406412985&adzoneId=110268500499&_=1615263216832
+
+local.pconline.com.cn:8080/api/tbk/dgMaterialOptional.do?callback=&q=&adzoneId=110268500499
 
 --代码
 $.ajax({url: "${best_spider_noprotocol}/api/tbk/search.do",
