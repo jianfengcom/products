@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<project name="pcdlc_spider" basedir=".">
+
+	<path id="classpath">
+		<fileset dir="../lib" includes="*.jar" />
+		<pathelement location="." />
+
+	</path>
+
+	<target name="runFeatureSpider">
+		<java fork="true" failonerror="true" classname="cn.pconline.pcdlc.spider.task.pc6.Pc6FeatureSpider">
+			<classpath refid="classpath" />
+			<sysproperty key="file.encoding" value="UTF-8" />
+		</java>
+	</target>
+	
+	<target name="onlinedownSpider">
+		<echo message="OnlinedownSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.onlinedown.OnlinedownPcSoftProcessor" />
+		</java>
+	</target>
+	
+	<target name="crskySpider">
+		<echo message="CrskySpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.crsky.CrskySoftProcess" />
+		</java>
+	</target>
+	
+	<target name="downZaSpider">
+		<echo message="DownZaSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.downza.DownZaPcSoftProcessor" />
+		</java>
+	</target>
+	
+	<target name="aso114Spider">
+		<echo message="aso114Spider  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.android.entry.aso114.Aso114Spider">
+			<classpath refid="classpath" />
+		</java>
+	</target>
+	
+	<target name="transferAndroidData">
+		<echo message="transferAndroidData  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.transfer.android.TransferAndroidData">
+			<classpath refid="classpath" />
+		</java>
+	</target>
+	<target name="seoAndroidSpider">
+		<echo message="miSpider  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.android.shop.SeoAndroidSpider">
+			<classpath refid="classpath" />
+		</java>
+	</target>
+	<target name="miSpider">
+		<echo message="miSpider  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.android.shop.BaseAndroidSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.model.android.AndroidMiModel" />
+		</java>
+	</target>
+	<target name="yybSpider">
+		<echo message="miSpider  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.android.shop.BaseAndroidSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.model.android.AndroidYYBModel" />
+		</java>
+	</target>
+	<target name="yybWapSpider">
+		<echo message="miSpider  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.android.shop.BaseAndroidSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.model.android.AndroidYYBWapModel" />
+		</java>
+	</target>
+	<target name="batchUpdateMiSpiderDataStatus">
+		<echo message="batchUpdateMiSpiderDataStatus  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.android.shop.BatchUpdateSpiderDataStatus">
+			<classpath refid="classpath" />
+			<arg value="32" />
+		</java>
+	</target>
+	<target name="batchUpdateYYBSpiderDataStatus">
+			<echo message="batchUpdateMiSpiderDataStatus  starting... " />
+			<java classname="cn.pconline.pcdlc.spider.task.android.shop.BatchUpdateSpiderDataStatus">
+				<classpath refid="classpath" />
+				<arg value="3" />
+			</java>
+		</target>
+	<target name="meizuSpider">
+		<echo message="meizuSpider  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.android.shop.BaseAndroidSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.model.android.AndroidMeizuModel" />
+		</java>
+	</target>
+	<target name="wandoujiaSpider">
+		<echo message="wandoujiaSpider  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.android.shop.BaseAndroidSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.model.android.AndroidWandoujiaModel" />
+		</java>
+	</target>
+	<target name="zhixiaoSpider">
+		<echo message="wandoujiaSpider starting... "/>
+		<java classname="cn.pconline.pcdlc.spider.task.miniapp.MiniAppSpider">
+			<classpath refid="classpath"/>
+			<arg value="zhixiao"/>
+		</java>
+	</target>
+	<target name="batchUpdateMeizuSpiderDataStatus">
+		<echo message="batchUpdateMeizuSpiderDataStatus  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.android.shop.BatchUpdateSpiderDataStatus">
+			<classpath refid="classpath" />
+			<arg value="33" />
+		</java>
+	</target>
+	<target name="batchUpdateWandoujiaSpiderDataStatus">
+		<echo message="batchUpdateWandoujiaSpiderDataStatus  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.android.shop.BatchUpdateSpiderDataStatus">
+			<classpath refid="classpath" />
+			<arg value="0" />
+		</java>
+	</target>
+	<target name="transferIOSData">
+		<echo message="transferIOSData  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.transfer.ios.TransferIOSData">
+			<classpath refid="classpath" />
+		</java>
+	</target>
+	<target name="itunesSpider">
+		<echo message="itunesSpider  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.ios.ItunesSpider">
+			<classpath refid="classpath" />
+		</java>
+	</target>
+	<target name="importanceSoftMonitorTask">
+		<echo message="SoftMonitorTask  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.monitor.SoftMonitorTask">
+			<classpath refid="classpath" />
+			<arg value="importance" />
+		</java>
+	</target>
+	<target name="defaultSoftMonitorTask">
+		<echo message="SoftMonitorTask  starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.monitor.SoftMonitorTask">
+			<classpath refid="classpath" />
+			<arg value="default" />
+		</java>
+	</target>
+	<target name="cr173SoftProccessor">
+		<echo message="Cr173SoftProccessor starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.cr173.Cr173SoftProccessor" />
+		</java>
+	</target>
+	<target name="pc6SoftSpider">
+		<echo message="Pc6SoftProccessor starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.pc6.Pc6SoftProccessor" />
+		</java>
+	</target>
+	<target name="brushes8Spider">
+		<echo message="Brushes8SoftProccessor starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.brushes8.Brushes8SoftProccessor" />
+		</java>
+	</target>
+	<target name="minappSpider">
+		<echo message="MinappProcessor starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.miniapp.minapp.MinappSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.miniapp.minapp.MinappProcessor" />
+		</java>
+	</target>
+	<target name="pc6MiniAppSpider">
+		<echo message="pc6MiniAppSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.miniapp.MiniAppSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.miniapp.pc6.Pc6Processor" />
+		</java>
+	</target>
+	<target name="sinaSoftSpider">
+		<echo message="sinaSoftSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.sina.SinaSoftProcessor" />
+		</java>
+	</target>
+	<target name="macAppSoftSpider">
+		<echo message="macAppSoftSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.apple.MacAppProcessor" />
+		</java>
+	</target>
+	<target name="chinazSoftSpider">
+		<echo message="chinazSoftSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.chinaz.ChinazSoftProccessor" />
+		</java>
+	</target>
+	<target name="jb51SoftSpider">
+		<echo message="jb51SoftSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.jb51.Jb51SoftProccessor" />
+		</java>
+	</target>
+	<target name="admin5SoftSpider">
+		<echo message="admin5SoftSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.admin5.Admin5SoftProccessor" />
+		</java>
+	</target>
+	<target name="yinxiaoSoftSpider">
+		<echo message="yinxiaoSoftSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.chinaz.YinxiaoSoftProccessor" />
+		</java>
+	</target>
+
+	<target name="pptSoftSpider">
+		<echo message="pptSoftSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSoftSpider">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.ppt.Ppt1SoftProcess" />
+		</java>
+	</target>
+
+	<target name="pcSpiderExtraTask">
+		<echo message="pptSoftSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSpiderExtraTask">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.downza.DownZaPcSoftProcessor" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.onlinedown.OnlinedownPcSoftProcessor" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.cr173.Cr173SoftProccessor" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.crsky.CrskySoftProcess" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.pc6.Pc6SoftProccessor" />
+			<arg value="0" />
+		</java>
+	</target>
+
+	<target name="pcSpiderExtraTask1">
+		<echo message="pptSoftSpider starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.pc.PcSpiderExtraTask">
+			<classpath refid="classpath" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.downza.DownZaPcSoftProcessor" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.onlinedown.OnlinedownPcSoftProcessor" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.cr173.Cr173SoftProccessor" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.crsky.CrskySoftProcess" />
+			<arg value="cn.pconline.pcdlc.spider.task.pc.pc6.Pc6SoftProccessor" />
+			<arg value="1" />
+		</java>
+	</target>
+	
+	<target name="checkSpiderTask">
+		<echo message="checkSpiderTask starting... " />
+		<java classname="cn.pconline.pcdlc.spider.task.monitor.SoftMonitorChangeTask">
+			<classpath refid="classpath" />
+		</java>
+	</target>
+</project>

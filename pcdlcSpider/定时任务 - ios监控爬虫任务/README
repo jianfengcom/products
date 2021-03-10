@@ -1,0 +1,9 @@
+192.168.241.116
+iosMonitorTask.sh
+10 12 * * *
+
+--页面软件数据
+
+--pic
+we-artwork--screenshot-platform-ipad
+we-artwork--screenshot-platform-iphone
