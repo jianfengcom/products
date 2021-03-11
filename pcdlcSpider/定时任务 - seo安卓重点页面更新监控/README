@@ -1,0 +1,7 @@
+192.168.10.35
+seoAndroidSpider.sh
+35 15 * * *
+
+
+--log
+/data/LOG/spider_sh_log/seoAndroidSpider.log
