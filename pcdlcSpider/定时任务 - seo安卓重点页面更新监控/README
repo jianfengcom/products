@@ -5,3 +5,56 @@ seoAndroidSpider.sh
 
 --log
 /data/LOG/spider_sh_log/seoAndroidSpider.log
+
+--测试代码
+String className = "cn.pconline.pcdlc.spider.model.android.AndroidYYBWapModel";
+List<String> urls = new ArrayList<>();
+urls.add("https://a.app.qq.com/o/simple.jsp?pkgname=com.dragon.read");
+spider(className, urls);
+
+-- 正式库
+指 dl_master_app_ext
+select * from dl_master_app_ext where package = "com.tencent.ggame"
+
+-- 关联软件
+如: https://dl.pconline.com.cn/download/1685570.html
+
+
+下面为爬虫执行步骤
+================================ 1.获取应用宝Wap端软件终端页的软件信息模板 ================================
+0. private void getYybWapSoftInformationMode1(Page page)
+
+
+
+================================ 2.AndroidSpiderPipeline.process ================================
+0.新建或修改 SpiderDataAndroid对象(dl_spider_data_android)
+
+
+
+================================ 3.生成审核表记录(ClientMasterSpider) ================================
+================================ dl_spider_data_android ================================
+0. public String transferAndroidData(SpiderDataAndroid spiderDataAndroid)
+
+1. 黑名单
+is_block = 1    is_sync = -1
+会继续执行下面代码
+
+2. 敏感词
+is_block = 2    is_sync = -1
+
+3. 正式库内重复 dl_master_app_ext.dl_master_id
+app_version.equals(dl_master_app_ext.version)
+select * from dl_master_app_ext where package = "com.tencent.ggame" // 当存在多个时, 根据特定条件选择一个
+
+4. 关联软件已被删除: status = 0
+SELECT count(1) FROM dl_master_info WHERE dl_master_id = 1685570 AND status = 0
+
+5. 版本都为空 app_version dl_client_master_spider.version
+
+6. 审核表记录已存在,且版本没有升级 app_version <= dl_client_master_spider.version
+
+==== 终于到真正更新软件信息的步骤了 ====
+
+7. 删除旧的ClientMasterSpider全部记录, 新建一条新的ClientMasterSpider记录
+
+8. 设置 is_sync = 1
