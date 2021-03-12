@@ -1,0 +1,28 @@
+ftp-new-pc.pconline.com.cn
+
+https://cloudcdn.dwion.com/index.html
+用户：GDTPYHLW
+密码：!QAZ2wsx
+
+--页面
+https://dl.pconline.com.cn/download/1367449.html
+
+String downloadLink_1918 = jspDomain + "filedown4_" + masterId + "_" +  3  + link.getDlLinkId() +
+				            "/" + riyueSoftwareName + "@1918_" + masterId + ".exe";
+
+--riyueSoftwareName
+gZs9WJkY/86.0.1.7739
+
+--链接
+SELECT dl_link_id FROM dl_link WHERE dl_master_id = 1367449
+
+--dl_link_id
+13942806
+
+--dl_link
+http://download.firefox.com.cn/releases-sha2/partners/pconline/stub/zh-CN/Firefox-setup.exe
+
+https://dlc2.pconline.com.cn/filedown4_1367449_313942806/gZs9WJkY/86.0.1.7739@1918_1367449.exe
+
+https://ftp.pconline.com.cn/pub/download/201010/maldner_20210309/terminator/Firefox_86.0.1.7739@1918_1367449.exe?md5=1Yx8ISY_3HGXEO3InRkx5A&expires=1615543235
+
