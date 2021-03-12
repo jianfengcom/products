@@ -37,10 +37,10 @@ select * from dl_master_app_ext where package = "com.tencent.ggame"
 
 1. 黑名单
 is_block = 1    is_sync = -1
-会继续执行下面代码
 
 2. 敏感词
 is_block = 2    is_sync = -1
+会继续执行下面代码
 
 3. 正式库内重复 dl_master_app_ext.dl_master_id
 app_version.equals(dl_master_app_ext.version)
