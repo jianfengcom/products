@@ -23,6 +23,8 @@ SELECT dl_link_id FROM dl_link WHERE dl_master_id = 1367449
 http://download.firefox.com.cn/releases-sha2/partners/pconline/stub/zh-CN/Firefox-setup.exe
 
 https://dlc2.pconline.com.cn/filedown4_1367449_313942806/gZs9WJkY/86.0.1.7739@1918_1367449.exe
+https://dlc2.pconline.com.cn/filedown4_1367449_313942806/yJM8hjn4/86.0.1.7739@1918_1367449.exe
 
 https://ftp.pconline.com.cn/pub/download/201010/maldner_20210309/terminator/Firefox_86.0.1.7739@1918_1367449.exe?md5=1Yx8ISY_3HGXEO3InRkx5A&expires=1615543235
+https://ftp.pconline.com.cn/pub/download/201010/maldner_20210309/terminator/Firefox_86.0.1.7739@1918_1367449.exe?md5=t_xFmz-iaxuOHIk1bw_Q6g&expires=1615772048
 
