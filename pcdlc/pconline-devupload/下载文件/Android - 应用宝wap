@@ -1,0 +1,16 @@
+192.168.10.35
+/intf/downloadApk.jsp?siteType=41
+10 * * * *
+
+================ 查询需要下载的数据(dl_client_master_spider) start ================
+-- 安卓  应用宝瓦片   apk未下载
+apk_status = 0 and master_type= 1481 and site_type= 41
+
+-- 前一百条数据 update_date DESC LIMIT 0,100
+
+-- dl_client_master_spider_id package apk_download_url
+SELECT apk_download_url FROM dl_client_master_spider WHERE dl_client_master_spider_id = 5382164
+================ 查询需要下载的数据(dl_client_master_spider) end ================
+
+-- 下载文件存放位置
+system.android.upload.path=/data1/devupload/web/apkdoanload
