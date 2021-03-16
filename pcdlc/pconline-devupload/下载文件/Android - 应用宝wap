@@ -3,7 +3,7 @@
 10 * * * *
 
 ================ 查询需要下载的数据(dl_client_master_spider) start ================
--- 安卓  应用宝瓦片   apk未下载
+-- 安卓  应用宝瓦片   apk未下载(符合这三个条件才会进行下载)
 apk_status = 0 and master_type= 1481 and site_type= 41
 
 -- 前一百条数据 update_date DESC LIMIT 0,100
@@ -12,5 +12,14 @@ apk_status = 0 and master_type= 1481 and site_type= 41
 SELECT apk_download_url FROM dl_client_master_spider WHERE dl_client_master_spider_id = 5382164
 ================ 查询需要下载的数据(dl_client_master_spider) end ================
 
--- 下载文件存放位置
+-- 下载文件存放位置(暂存盘)
 system.android.upload.path=/data1/devupload/web/apkdoanload
+
+-- 访问下载文件
+http://devupload.pc.com.cn/apkdoanload/1615856642688.apk (能直接下载)
+location ~ ^/apkdoanload {
+	root /data1/devupload/web/;
+}
+
+
+todo 下载文件7天过期, 有定时任务执行删除操作
