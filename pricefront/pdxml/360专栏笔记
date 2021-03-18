@@ -1,0 +1,12 @@
+--入口
+xml_article_360_2019.jsp
+UCXMLExecutor.browserArticle
+XMLHelper.browerArticleNode
+
+
+--xml
+http://pdxml.pconline.com.cn/360_article_2019_sitemap.xml
+
+
+--痛点
+#ad=8579
