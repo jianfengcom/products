@@ -1,0 +1,42 @@
+问题列表
+https://wenda.pchouse.com.cn/admin/question/list.jsp?tid=188
+
+
+================ 表 start ================
+QuestionXDB
+
+QuestionRepository
+Question.getFieldInfo() 对象与数据库映射
+================ 表 end ================
+
+
+================ 分表 start ================
+answer分表
+int index=(int)qId%getAnswerTbCount(); (FkQuestionDataSource)
+
+question分表
+getTidByQid(long questionId)    =>  questionTypeId
+int tableIndex = questionRepository.questionXDB.getTableIndex(questionTypeId); (QuestionService)
+================ 分表 end ================
+
+
+================ 根据问题ID查询 start ================
+https://wenda.pchouse.com.cn/admin/question/releasedList.jsp?tid=&id=4659169&createTimeS=&createTimeE=&source=&treeType=2
+4659169
+
+/admin/question/exportQuestion.jsp
+queryResult.jsp
+通过问题ID找到类型ID
+
+select question_type_id from fk_question_qtype_9 WHERE question_id = 4659169
+"fk_question_qtype_" + (questionId % 20)
+"fk_question_qtype"
+=>  220
+select question_table_index from fk_question_type_map where question_type_id = 220
+=>  9
+SELECT best_answer_id, id FROM fk_question_9 WHERE id = 4659169
+=>  16651830, 4659169
+
+question.bestAnswer.createTime
+=>  SELECT create_time, intro FROM fk_answer_69 WHERE id = 16651830
+================ 根据问题ID查询 end ================
