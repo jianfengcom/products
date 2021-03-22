@@ -1,0 +1,87 @@
+new XMLMailSender(null).sendMail("主题", message);
+
+{validLog=null，文件：360_article_2019_brower_1.xml 解析Document对象异常！，文件：360_article_2019_brower_2.xml 解析Document对象异常！，文件：360_article_2019_brower_3.xml 解析Document对象异常！，文件：360_article_2019_brower_4.xml 解析Document对象异常！，文件：360_article_2019_brower_5.xml 解析Document对象异常！，文件：360_article_2019_brower_6.xml 解析Document对象异常！，文件：360_article_2019_brower_7.xml 解析Document对象异常！，文件：360_article_2019_brower_8.xml 解析Document对象异常！，文件：360_article_2019_brower_9.xml 解析Document对象异常！，文件：360_article_2019_brower_10.xml 解析Document对象异常！，文件：360_article_2019_brower_11.xml 解析Document对象异常！，文件：360_article_2019_brower_12.xml 解析Document对象异常！，文件：360_article_2019_brower_13.xml 解析Document对象异常！，文件：360_article_2019_brower_14.xml 解析Document对象异常！，文件：360_article_2019_brower_15.xml 解析Document对象异常！，文件：360_article_2019_brower_16.xml 解析Document对象异常！，文件：360_article_2019_brower_17.xml 解析Document对象异常！，文件：360_article_2019_brower_18.xml 解析Document对象异常！，文件：360_article_2019_brower_19.xml 解析Document对象异常！，文件：360_article_2019_brower_20.xml 解析Document对象异常！，文件：360_article_2019_brower_21.xml 解析Document对象异常！，文件：360_article_2019_brower_22.xml 解析Document对象异常！，文件：360_article_2019_brower_23.xml 解析Document对象异常！，文件：360_article_2019_brower_24.xml 解析Document对象异常！，文件：360_article_2019_brower_25.xml 解析Document对象异常！}
+
+
+--out
+[03-22 14:27:30.681] ### 2019-360搜索大咖文章_XML生成任务已启动，批次：0.......
+[03-22 14:27:35.086] -----------------生成开始-----------------共25131个产品!
+[03-22 14:27:55.348] fileName--> 360_article_2019_brower_1.xml
+[03-22 14:28:22.163] fileName--> 360_article_2019_brower_2.xml
+[03-22 14:28:54.178] fileName--> 360_article_2019_brower_3.xml
+[03-22 14:29:15.927] fileName--> 360_article_2019_brower_4.xml
+[03-22 14:29:41.759] fileName--> 360_article_2019_brower_5.xml
+[03-22 14:30:01.078]
+[03-22 14:30:01.078]
+[03-22 14:30:01.078] 2016_神马_产品信息_XML生成线程已启动.......
+[03-22 14:30:16.712] fileName--> 360_article_2019_brower_6.xml
+[03-22 14:30:43.558] fileName--> 360_article_2019_brower_7.xml
+[03-22 14:31:09.511] fileName--> 360_article_2019_brower_8.xml
+[03-22 14:31:41.521] fileName--> 360_article_2019_brower_9.xml
+[03-22 14:32:17.032] fileName--> 360_article_2019_brower_10.xml
+[03-22 14:32:20.340] 小类读取完毕，最后一个文件名为：sm_product_2016_info_loc_1.xml
+[03-22 14:32:20.340] ----------------- 生成结束， 共写入：1218 条记录-----------------
+[03-22 14:32:20.340] 共用时：139.262 秒！
+[03-22 14:32:20.548] 2016_神马_产品信息_XML生成线程已结束.......
+[03-22 14:32:20.548]
+[03-22 14:32:20.548]
+[03-22 14:32:33.968] fileName--> 360_article_2019_brower_11.xml
+[03-22 14:33:06.283] fileName--> 360_article_2019_brower_12.xml
+[03-22 14:33:40.691] fileName--> 360_article_2019_brower_13.xml
+[03-22 14:34:03.849] fileName--> 360_article_2019_brower_14.xml
+[03-22 14:34:39.028] fileName--> 360_article_2019_brower_15.xml
+[03-22 14:35:22.066] fileName--> 360_article_2019_brower_16.xml
+[03-22 14:35:55.436] fileName--> 360_article_2019_brower_17.xml
+[03-22 14:36:43.144] fileName--> 360_article_2019_brower_18.xml
+[03-22 14:37:21.940] fileName--> 360_article_2019_brower_19.xml
+[03-22 14:37:47.464] fileName--> 360_article_2019_brower_20.xml
+[03-22 14:38:13.706] fileName--> 360_article_2019_brower_21.xml
+[03-22 14:38:45.227] fileName--> 360_article_2019_brower_22.xml
+[03-22 14:39:12.854] fileName--> 360_article_2019_brower_23.xml
+[03-22 14:39:36.251] fileName--> 360_article_2019_brower_24.xml
+[03-22 14:40:08.656] fileName--> 360_article_2019_brower_25.xml
+[03-22 14:40:37.375] 读取完毕，最后一个文件名为：360_article_2019_brower_26.xml
+[03-22 14:40:37.375] -----------------生成结束-----------------
+[03-22 14:40:37.375] ----------------- 文章不存在过滤数：6052 条记录-----------------
+[03-22 14:40:37.375] 本次共写入：19079 条产品记录
+[03-22 14:40:37.375] 共用时：786.694 秒！
+[03-22 14:40:37.445] 邮件信息为：{validLog=null，文件：360_article_2019_brower_1.xml 解析Document对象异常！，文件：360_article_2019_brower_2.xml 解析Document对象异常！，文件：360_article_2019_brower_3.xml 解析Document对象异常！，文件：360_article_2019_brower_4.xml 解析Document对象异常！，文件：360_article_2019_brower_5.xml 解析Document对象异常！，文件：360_article_2019_brower_6.xml 解析Document对象异常！，文件：360_article_2019_brower_7.xml 解析Document对象异常！，文件：360_article_2019_brower_8.xml 解析Document对象异常！，文件：360_article_2019_brower_9.xml 解析Document对象异常！，文件：360_article_2019_brower_10.xml 解析Document对象异常！，文件：360_article_2019_brower_11.xml 解析Document对象异常！，文件：360_article_2019_brower_12.xml 解析Document对象异常！，文件：360_article_2019_brower_13.xml 解析Document对象异常！，文件：360_article_2019_brower_14.xml 解析Document对象异常！，文件：360_article_2019_brower_15.xml 解析Document对象异常！，文件：360_article_2019_brower_16.xml 解析Document对象异常！，文件：360_article_2019_brower_17.xml 解析Document对象异常！，文件：360_article_2019_brower_18.xml 解析Document对象异常！，文件：360_article_2019_brower_19.xml 解析Document对象异常！，文件：360_article_2019_brower_20.xml 解析Document对象异常！，文件：360_article_2019_brower_21.xml 解析Document对象异常！，文件：360_article_2019_brower_22.xml 解析Document对象异常！，文件：360_article_2019_brower_23.xml 解析Document对象异常！，文件：360_article_2019_brower_24.xml 解析Document对象异常！，文件：360_article_2019_brower_25.xml 解析Document对象异常！}
+[03-22 14:40:37.445] ### 2019-360搜索大咖文章_XML生成任务已完成，批次：0.
+
+
+--FileNotFoundException
+ java.io.FileNotFoundException: /data/web/pconline-pdxml-gen/360_article_2019_brower_25.xml (No such file or directory)
+[03-22 14:40:37.391]    at java.io.FileInputStream.open(Native Method)
+[03-22 14:40:37.391]    at java.io.FileInputStream.<init>(FileInputStream.java:120)
+[03-22 14:40:37.391]    at java.io.FileInputStream.<init>(FileInputStream.java:79)
+[03-22 14:40:37.391]    at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:70)
+[03-22 14:40:37.391]    at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:161)
+[03-22 14:40:37.391]    at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:651)
+[03-22 14:40:37.391]    at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:186)
+[03-22 14:40:37.391]    at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:772)
+[03-22 14:40:37.391]    at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:737)
+[03-22 14:40:37.391]    at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:119)
+[03-22 14:40:37.391]    at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:232)
+[03-22 14:40:37.391]    at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:284)
+[03-22 14:40:37.391]    at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:208)
+[03-22 14:40:37.391]    at cn.com.pconline.core.pricefront.xml.XMLValidator.validXML2Doc(XMLValidator.java:126)
+[03-22 14:40:37.391]    at cn.com.pconline.core.pricefront.xml.XMLValidator.validateXML(XMLValidator.java:64)
+[03-22 14:40:37.391]    at cn.com.pconline.core.pricefront.xml.UCXMLExecutor.browserArticle(UCXMLExecutor.java:881)
+[03-22 14:40:37.391]    at _jsp._uc_0sm._360._xml_0article_0360_02019__jsp._jspService(_xml_0article_0360_02019__jsp.java:74)
+[03-22 14:40:37.391]    at com.caucho.jsp.JavaPage.service(JavaPage.java:61)
+[03-22 14:40:37.391]    at com.caucho.jsp.Page.pageservice(Page.java:578)
+[03-22 14:40:37.391]    at com.caucho.server.dispatch.PageFilterChain.doFilter(PageFilterChain.java:195)
+[03-22 14:40:37.391]    at cn.com.pconline.core.pricefront.view.filter.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:273)
+[03-22 14:40:37.391]    at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+[03-22 14:40:37.391]    at cn.com.pconline.core.pricefront.util.EnvFilter.doFilter(EnvFilter.java:49)
+[03-22 14:40:37.391]    at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+[03-22 14:40:37.391]    at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:96)
+[03-22 14:40:37.391]    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+[03-22 14:40:37.391]    at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+[03-22 14:40:37.392]    at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:187)
+[03-22 14:40:37.392]    at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:265)
+[03-22 14:40:37.392]    at com.caucho.server.http.HttpRequest.handleRequest(HttpRequest.java:273)
+[03-22 14:40:37.392]    at com.caucho.server.port.TcpConnection.run(TcpConnection.java:682)
+[03-22 14:40:37.392]    at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:730)
+[03-22 14:40:37.392]    at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:649)
+[03-22 14:40:37.392]    at java.lang.Thread.run(Thread.java:662)
