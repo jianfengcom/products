@@ -6,7 +6,7 @@ https://apps.apple.com/cn/app/id1555608867
 同步App Store信息出错，请稍后重试！
 handle: 搜代码
 
---过程
+--流程
 新增 intf/iosSpiderMaster.jsp (pcdlc)
 新增 IosSpiderMaster.java (gluttony)
 新增代码 System.out.println("appJson=" + appJson);
