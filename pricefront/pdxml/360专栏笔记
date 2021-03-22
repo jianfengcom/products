@@ -3,10 +3,49 @@ xml_article_360_2019.jsp
 UCXMLExecutor.browserArticle
 XMLHelper.browerArticleNode
 
-
---xml
-http://pdxml.pconline.com.cn/360_article_2019_sitemap.xml
-
-
 --痛点
-#ad=8579
+#ad=8579 换成8933
+
+================ 链接 start ================
+localhost:8083/uc_sm/360/xml_article_360_2019.jsp
+192.168.240.183:8081/uc_sm/360/xml_article_360_2019.jsp
+
+http://pdxml.pconline.com.cn/360_article_2019_sitemap.xml
+http://pdxml.pconline.com.cn/360_article_2019_brower_1.xml (不行)
+http://pdxml.pconline.com.cn/360_article_2019_brower_26.xml (不行)
+================ 链接 end ================
+
+
+--日志
+/data/PRG/resin-pro-3.1.8_pconline-pdxml/log
+
+
+
+================ XMLValidator.validXML2Doc start ================
+GENERATE_DIR = File.separator + "pconline-pdxml-gen"
+XML_TAG = "pd_xml.tag"
+\
+File genFilesTag = new File(this.baseDir + GENERATE_DIR + File.separator + validType + XML_TAG);
+
+/data/web/pconline-pdxml-gen/360_article_2019_brower_25.xml (No such file or directory)
+================ XMLValidator.validXML2Doc end ================
+
+
+
+================ 位置 start ================
+/data/web/pconline-pdxml/360_article_2019_sitemap.xml
+/data/web/pconline-pdxml/360_article_2019_brower_1.xml (都是3.19)
+/data/web/pconline-pdxml/360_article_2019_brower_26.xml (都是3.19)
+
+/data/web/pconline-pdxml-gen
+================ 位置 end ================
+
+
+================ todo start ================
+
+uc_sm_attr_xml.jsp
+UCXMLExecutor.attrExecute
+XMLValidator.validateXML
+XMLValidator.validXML2Doc
+
+================ todo end ================
