@@ -53,7 +53,7 @@ SELECT count(1) FROM dl_master_info WHERE dl_master_id = 1685570 AND status = 0
 
 6. 审核表记录已存在,且版本没有升级 app_version <= dl_client_master_spider.version
 
-==== 终于到真正更新软件信息的步骤了 ====
+================================ 终于到真正更新软件信息的步骤了 ================================
 
 7. 删除旧的ClientMasterSpider全部记录, 新建一条新的ClientMasterSpider记录
 
