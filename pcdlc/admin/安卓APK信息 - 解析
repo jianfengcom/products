@@ -1,21 +1,17 @@
 --
 http://newplay.pconline.com.cn/updateMasterPackageName.do?channelId=-1&masterId=2704671
 
-
---结果
+--Response
 {"result":"send request failed","flag":0}
 
+--解决
+因为联通ftp搬迁(联通ftp搬迁_v1.xlsx), 所以更换成新的ip即可
 
-
---日志
+================ 日志 start ================
 /data/LOG/resin_pconline-dl/log
 
-[INFO] 2021-03-22 09:22:29,021 --> [http-app-a-8080-16$573443878] cn.pconline.pcdlc.service.FtpFileService.updateMasterPackageName(FtpFileService.java:352): **channelId:-1--masterId2704671--link:http://ftp-apk.pconline.com.cn/pub/download/201010/com.easymin.daijia.gddriver.halouV6_4.50.5.0010.apk---app:
-[2021-03-22 09:22:29.021] url:
 http://192.168.230.172:9090/api/apk/apkParser?masterId=2704671&linkUrl=http://ftp-apk.pconline.com.cn/pub/download/201010/com.easymin.daijia.gddriver.halouV6_4.50.5.0010.apk&ftpType=a&flag=1
+result:send request failed
 
-[http-app-a-8080-16$573443878] cn.pconline.pcdlc.service.FtpFileService.updateMasterPackageName(FtpFileService.java:377): result:send request failed
-[2021-03-22 09:24:02.080] [INFO] 2021-03-22 09:24:02,079 --> [http-app-a-8080-10$195968379] cn.pconline.pcdlc.web.filter.LoginFilter.doFilter(LoginFilter.java:42): req uri: http://newplay.pconline.com.cn/admin/listMaster.do ; clientIp: 14.23.152.194
-
-
-:http://192.168.246.69:9090/api/apk/apkParser?masterId=2704671&linkUrl=http://ftp-apk.pconline.com.cn/pub/download/201010/com.easymin.daijia.gddriver.halouV6_4.50.5.0010.apk&ftpType=a&flag=1
+http://192.168.246.69:9090/api/apk/apkParser?masterId=2704671&linkUrl=http://ftp-apk.pconline.com.cn/pub/download/201010/com.easymin.daijia.gddriver.halouV6_4.50.5.0010.apk&ftpType=a&flag=1
+================ 日志 end ================
