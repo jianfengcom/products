@@ -2,8 +2,32 @@
 1、七麦上架监控，每日凌晨0点开始爬取前一天的新上架应用：
 上架应用监控:
 https://www.qimai.cn/rank/release/genre/36/country/cn/date/2021-03-22_2021-03-22/is_preorder/all/status/3
+release
 
 
 2、七麦版本更新监控，每日凌晨0点开始爬取前一天的软件更新：
 版本更新监控：
 https://www.qimai.cn/rank/versionUpdate/country/cn/genre/36/date/2021-03-22/order/3/status/3
+
+
+================================ 关键词 ================================
+七麦 analysis
+
+
+================================ github ================================
+https://github.com/mardan997/Qimai_AppData
+
+
+================================ 1 ================================
+https://blog.csdn.net/qian123shuai/article/details/84197652
+
+
+================================ 2 ================================
+https://www.csdn.net/tags/MtTaQgwsNjcxNjctYmxvZwO0O0OO0O0O.html
+https://blog.csdn.net/qq_39731741/article/details/111176967?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-4-111176967.pc_agg_rank_aggregation&utm_term=%E7%88%AC%E5%8F%96vue%E7%BD%91%E9%A1%B5&spm=1000.2123.3001.4430
+java通过selenium爬取js动态渲染的页面
+
+
+================================ 3 ================================
+webmagic 多线程
+chromedriver
