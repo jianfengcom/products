@@ -1,0 +1,26 @@
+http://newplay.pconline.com.cn/admin/clientMasterAppLogs.do
+
+--临时盘
+/data1/devupload/web/apkdoanload
+
+--痛点
+业务说明：爬取软件通过后，在appLog表会插入一条记录，此时软件信息和软件链点都已经有了，但是ftp服务器没有对应文件，
+* 临时盘上的爬取文件会定时搬运到ftp服务器，该接口用于文件是否同步到ftp，显示在后台。
+* ps:用户手动上传的文件不需要同步，直接上传到ftp了,只有爬取文件才需要同步
+
+================ `dl_client_master_app_log` start ================
+--flag 10.35服务器文件同步到ftp状态
+0:文件未同步到ftp
+1:已同步到ftp
+-1:同步失败
+
+SELECT * FROM `dl_client_master_app_log` where 1 = 1
+AND apk_file_name LIKE '%202103/1616146106044.apk%'
+AND create_date between '2021-03-24 00:00:00' AND '2021-03-24 23:59:59'
+AND flag = 0
+AND status = 1 order by create_date desc
+================ `dl_client_master_app_log` end ================
+
+--同步定时任务
+wget_apk_file_and_sync_to_ftp-new-apk.sh
+
