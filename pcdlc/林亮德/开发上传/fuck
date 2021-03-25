@@ -40,12 +40,44 @@ SELECT * FROM dl_client_master_app_log WHERE dl_master_id IN (2811108,2809440,28
 AND create_date >= '2021-03-10' AND dl_developer_id != 0 order by dl_master_id desc
 
 ================ # start ================
-SELECT COUNT(DISTINCT dl_master_id) FROM dl_client_master_app_log WHERE dl_master_id IN (360050,995502,1370781,2550718,1060407,2811124,1639647,2811107,2811123,2798958,2811125,2811132,2804780,2804786,1641879,2765931,2798970,363410)
-AND create_date >= '2021-03-10' AND dl_developer_id != 0 order by dl_master_id desc
+SELECT COUNT(dl_master_id) FROM dl_client_master_app_log WHERE dl_master_id IN (360050,995502,1370781,2550718,1060407,2811124,1639647,2811107,2811123,2798958,2811125,2811132,2804780,2804786,1641879,2765931,2798970,363410)
+AND create_date >= '2021-03-10' AND dl_developer_id != 0 and flag = 1 order by dl_master_id desc
 
-SELECT COUNT(DISTINCT dl_master_id) FROM dl_client_master_app_log WHERE apk_log_id IN (1563590,1561766,1561791,1563595,1561764,1561781,1561790,1561782,1563593)
-AND create_date >= '2021-03-10' AND dl_developer_id != 0 order by dl_master_id desc
+SELECT COUNT(dl_master_id) FROM dl_client_master_app_log WHERE apk_log_id IN (1563590,1561766,1561791,1563595,1561764,1561781,1561790,1561782,1563593)
+AND create_date >= '2021-03-10' AND dl_developer_id != 0 and flag = 1 order by dl_master_id desc
 ================ # end ================
+
+
+================ apk start ================
+1615897568895.apk
+1615813911103.apk
+1615804420467.apk
+1615799825102.apk
+1615453363414.apk
+1615597719229.apk
+1615520643213.apk
+1615550112129.apk
+1615684066839.apk
+1615455565442.apk
+1616080767978.apk
+1615603842077.apk
+1615956285784.apk
+1615447484697.apk
+1616119000303.apk
+1616080984966.apk
+1615947529940.apk
+1615543498362.apk
+
+1616070539583.apk
+1615451421336.apk
+1615888293828.apk
+1616124454012.apk
+1615366662681.apk
+1615775804885.apk
+1615878660803.apk
+1615790896586.apk
+1616115754443.apk
+================ apk end ================
 
 PMP项目管理培训（精讲课）
 https://lexiangla.com/classes/1f9b0f560f7611eab4310a58ac130977?type=1&company_from=1e5f135c5fdc11e99f4a5254002f1020
