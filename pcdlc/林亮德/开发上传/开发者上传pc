@@ -1,0 +1,13 @@
+192.168.241.115
+
+
+
+/data/sh/pc/wget_pc_file_and_sync_to_ftp-idc.sh
+
+
+
+SELECT COUNT(dl_master_id) FROM dl_client_master_app_log WHERE dl_master_id IN (2350223,1060505,2812019,2788022,2596420,2812020,2812021,2812031,1011027,2743625,2810927,1656843)
+AND create_date >= '2021-03-10' AND dl_developer_id != 0 and flag = 1 order by dl_master_id desc
+
+SELECT COUNT(dl_master_id) FROM dl_client_master_app_log WHERE dl_master_id IN (2350223,1060505,2812019,2788022,2596420,2812020,2812021,2812031,1011027,2743625,2810927,1656843)
+AND create_date >= '2021-03-10' AND dl_developer_id != 0 and flag = 1 order by dl_master_id desc
