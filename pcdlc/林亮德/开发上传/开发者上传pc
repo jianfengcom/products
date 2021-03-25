@@ -1,5 +1,22 @@
 192.168.241.115
 
+================ 网络 start ================
+ftp_ip="192.168.231.56 192.168.230.210"
+ftp_ip="192.168.246.72 192.168.246.71"
+================ 网络 end ================
+
+================ sql start ================
+2021-03-25
+
+SELECT * FROM dl_client_master_vr_log WHERE create_date >= '2021-03-10'
+and flag = 0
+and site_type in (15)
+================ sql end ================
+
+================ 404 start ================
+https://ftp-idc.pconline.com.cn/pub/download/201010/pconline1616155845995.zip?md5=fC-xXPsUuTKeguSZWxrCww&expires=1616679570
+/data1/devupload/web/pcdownload/1616155845995.zip
+================ 404 end ================
 
 
 /data/sh/pc/wget_pc_file_and_sync_to_ftp-idc.sh
