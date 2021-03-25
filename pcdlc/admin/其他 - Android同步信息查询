@@ -1,3 +1,4 @@
+--后台查询页面
 http://newplay.pconline.com.cn/admin/clientMasterAppLogs.do
 
 --临时盘
@@ -7,6 +8,9 @@ http://newplay.pconline.com.cn/admin/clientMasterAppLogs.do
 业务说明：爬取软件通过后，在appLog表会插入一条记录，此时软件信息和软件链点都已经有了，但是ftp服务器没有对应文件，
 * 临时盘上的爬取文件会定时搬运到ftp服务器，该接口用于文件是否同步到ftp，显示在后台。
 * ps:用户手动上传的文件不需要同步，直接上传到ftp了,只有爬取文件才需要同步
+
+--解决
+/data1/sh/apk/log/curl.log
 
 ================ `dl_client_master_app_log` start ================
 --flag 10.35服务器文件同步到ftp状态
@@ -21,6 +25,23 @@ AND flag = 0
 AND status = 1 order by create_date desc
 ================ `dl_client_master_app_log` end ================
 
---同步定时任务
+================ 位置 start ================
+--需要同步到ftp的文件
+/data1/devupload/web/apkdoanload/1616559021532.apk
+/data1/sh/apk/wget_apk_file_and_sync_to_ftp-new-apk.sh
+
+--日志
+/data1/sh/apk/log/$(date "+%F_%H-%M").log
+/data1/sh/apk/log/2021-03-24_11-50.log
+ %F    完整日期格式，等价于 %Y-%m-%d
+ %H    小时(00-23)
+ %M    分(00-59)
+
+--日志 - 文件同步到ftp成功标志
+ /data1/sh/apk/log/curl.log
+ successcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616581179519.apk (定时任务机器)
+================ 位置 end ================
+
+--同步定时任务 (系统自带定时任务)
 wget_apk_file_and_sync_to_ftp-new-apk.sh
 

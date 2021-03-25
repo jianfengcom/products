@@ -1,0 +1,38 @@
+日志编号	软件编号	软件名称	文件名	创建人	创建日期	同步状态	同步日期
+1563589	358580	京东金融	202103/1616146106044.apk	苏冠德	2021-03-24 13:40:40	未同步	无
+1563588	663733	运满满找货	202103/1616146063843.apk	苏冠德	2021-03-24 13:40:39	未同步	无
+1563587	713477	券妈妈优惠券	202103/1616146061456.apk	苏冠德	2021-03-24 13:40:38	未同步	无
+1563586	365612	中信银行	202103/1616146031322.apk	苏冠德	2021-03-24 13:40:37	未同步	无
+1563585	354404	LT来电闪光	202103/1616146030382.apk	苏冠德	2021-03-24 13:40:36	未同步	无
+1563584	800996	i生活	202103/1616145994037.apk	苏冠德	2021-03-24 13:40:35	未同步	无
+1563583	369965	录屏大师	202103/1616145967605.apk	苏冠德	2021-03-24 13:40:34	未同步	无
+1563582	639695	食行	202103/1616145931062.apk	苏冠德	2021-03-24 13:40:33	未同步	无
+1563581	675940	车行无忧	202103/1616145927482.apk	苏冠德	2021-03-24 13:40:32	未同步	无
+1563580	563083	点评管家	202103/1616145923165.apk	苏冠德	2021-03-24 13:37:07	未同步	无
+1563579	732345	香格里拉酒店集团	202103/1616145891796.apk	苏冠德	2021-03-24 13:37:06	未同步	无
+1563578	366279	喜购	202103/1616145862839.apk	苏冠德	2021-03-24 13:37:05	未同步	无
+1563577	89975	365日历手机版下载	202103/1616145859051.apk	苏冠德	2021-03-24 13:37:04	未同步	无
+1563576	745013	智远一户通	202103/1616145815789.apk	苏冠德	2021-03-24 13:37:03	未同步	无
+1563575	584616	微商	202103/1616145829726.apk	苏冠德	2021-03-24 13:37:01	未同步	无
+
+
+
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134580000.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134576059.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134563231.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134536349.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134505627.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134527895.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134484127.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134453852.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134472637.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134434597.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134448788.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134414181.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134431962.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134383335.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134223171.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134212397.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616134230065.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616132976757.apk
+not existcurl -I http://192.168.238.160:8080/sync/apk/result.do?fileName=202103/1616132969337.apk
