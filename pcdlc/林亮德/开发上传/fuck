@@ -38,6 +38,11 @@ SELECT * FROM dl_client_master_app_log WHERE dl_master_id IN (2811108,2809440,28
 AND create_date >= '2021-03-10' AND dl_developer_id != 0 order by dl_master_id desc
 
 
+
+1563590,1561766,1561791,1563595,1561764,1561781,1561790,1561782,1563593
+
+
+
 PMP项目管理培训（精讲课）
 https://lexiangla.com/classes/1f9b0f560f7611eab4310a58ac130977?type=1&company_from=1e5f135c5fdc11e99f4a5254002f1020
 
