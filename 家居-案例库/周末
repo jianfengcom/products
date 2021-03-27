@@ -1,4 +1,4 @@
-http://t-dingzhi.pchouse.com.cn/
+curl http://t-dingzhi.pchouse.com.cn/
 192.168.52.183
 
 --log
@@ -8,28 +8,29 @@ http://t-dingzhi.pchouse.com.cn/
 tail -100f /app/pchouse_cases/resin-pro-3.1.8/log/stdout.log
 tail -100f /app/pchouse_cases/resin-pro-3.1.8/log/jdk-out.log
 
+--页数
+508862
+2544.31
+2545
 
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=751&pageEnd=900
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=901&pageEnd=1050
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+--标志
+ ## 执行整合案例数据 START...
+ .
+ .
+ .
+ ## 执行整合案例数据 END.
+
+
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=751&pageEnd=900
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=901&pageEnd=1050
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=1051&pageEnd=1200
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=1201&pageEnd=1350
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=1351&pageEnd=1500
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=1501&pageEnd=1650
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=1651&pageEnd=1800
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=1801&pageEnd=1950
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=1951&pageEnd=2100
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=2101&pageEnd=2250
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=2251&pageEnd=2400
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=2401&pageEnd=2550
