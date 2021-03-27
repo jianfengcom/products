@@ -1,0 +1,57 @@
+--svn
+http://svn.demo.pc.com.cn/svn/pclady_cosme/trunk/cosme3
+
+--target
+https://dingzhi.pchouse.com.cn/admin/index.jsp
+https://dingzhi.pchouse.com.cn/admin/designer/update.do?id=54270&_=1616653352307
+
+localhost:8086/admin/index.jsp
+https://dingzhi.pchouse.com.cn/admin/designer/list.do
+
+localhost:8086/admin/index.jsp
+ids: 50927423,50917064,50895598,28311483,28311483,28311483,28311483,50895598,43623229,40449125,8844901,45261739,8844901,49031936,50873865,49699592,50863059,49713649,50858294,45261739,8844901,49031950,42381915,42381915,42381915
+
+http://localhost:8086/admin/designer/update.do?id=54270&_=1616642640399
+GET
+
+--参考 best
+https://best.pconline.com.cn/admin/login.jsp
+网站设置 - 焦点图列表 - 添加
+https://best.pconline.com.cn/admin/focusimage/create.do?pi=-1&_=1616646093679
+
+--参考 designer
+http://designer.pchouse.com.cn/admin/index.jsp
+http://designer.pchouse.com.cn/admin/designer/create.do?_=1616652411381
+
+
+
+--设计师列表
+https://dingzhi.pchouse.com.cn/admin/designer/list.do?_=1616732159040
+
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--good
+@Transient
+queryForObject

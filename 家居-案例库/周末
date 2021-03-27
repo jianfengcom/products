@@ -20,10 +20,23 @@ tail -100f /app/pchouse_cases/resin-pro-3.1.8/log/jdk-out.log
  .
  ## 执行整合案例数据 END.
 
+--时间
+90分钟
+19:50
+
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=401&pageEnd=600
+
+
+
+ http://ci.pc.com.cn/jenkins/job/pchouse_cases_52.183/
+
+
+
 
 curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
-curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=751&pageEnd=900
-curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=901&pageEnd=1050
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=786&pageEnd=900
+curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=910&pageEnd=1050
 curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=1051&pageEnd=1200
 curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=1201&pageEnd=1350
 curl http://192.168.52.183:8001/data/case/integrate.do?pageNo=1351&pageEnd=1500
