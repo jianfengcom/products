@@ -1,0 +1,35 @@
+http://t-dingzhi.pchouse.com.cn/
+192.168.52.183
+
+--log
+/app/pchouse_cases/resin-pro-3.1.8/log/stdout.log
+/app/pchouse_cases/resin-pro-3.1.8/log/jdk-out.log
+
+tail -100f /app/pchouse_cases/resin-pro-3.1.8/log/stdout.log
+tail -100f /app/pchouse_cases/resin-pro-3.1.8/log/jdk-out.log
+
+
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=751&pageEnd=900
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=901&pageEnd=1050
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
+http://192.168.52.183:8001/data/case/integrate.do?pageNo=601&pageEnd=750
