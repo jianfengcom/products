@@ -1,0 +1,12 @@
+--新品速递
+mall.pconline.com.cn/api/tiantitu/new
+
+
+--天梯图 对应的产品
+http://mall.pconline.com.cn/api/tiantitu/products?ladderId=1&productId=1329100
+
+
+--手机CPU
+CPU核心
+GPU型号
+
