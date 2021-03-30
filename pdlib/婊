@@ -15,6 +15,13 @@ select * from pdl_product_type where type = 3 AND parent_id = 20937 AND name = '
 select * from pdl_product_type where type = 3 AND parent_id = 135964 AND name = '高通骁龙' 135984
 select * from pdl_product where type_id = 135984
 
+1071713
+select * from pdl_product
+
+select * from pdl_product_item where product_id = 1071713 and key = 'CPU核心'
+select * from pdl_product_item where product_id = 1071713 and key = 'GPU型号'
+
+
 --Product
 
 
