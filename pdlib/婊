@@ -1,8 +1,22 @@
 --ProductType
 大类 小类 品牌分别如下
+-手机CPU
 select * from pdl_product_type where type = 1 and name = '手机通讯'  24346
 select * from pdl_product_type where type = 2 and name = '手机CPU'  135964
-select * from pdl_product_type where type = 3 AND parent_id = 135964 AND name = '苹果'
+select * from pdl_product_type where type = 3 AND parent_id = 135964 AND name = '苹果' 136326
+
+
+-手机
+select * from pdl_product_type where type = 2 and name = '手机' 20937
+select * from pdl_product_type where type = 3 AND parent_id = 20937 AND name = '苹果(Apple)' 44299
+
+
+--
+select * from pdl_product_type where type = 3 AND parent_id = 135964 AND name = '高通骁龙' 135984
+select * from pdl_product where type_id = 135984
+
+--Product
+
 
 
 --查询 所有大类 >>手机通讯 >>手机CPU >>苹果
