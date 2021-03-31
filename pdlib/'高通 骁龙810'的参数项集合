@@ -1,0 +1,29 @@
+================ 大类 小类 品牌(ProductType) start ================
+-手机CPU
+select * from pdl_product_type where type = 1 and name = '手机通讯'  24346
+select * from pdl_product_type where type = 2 and name = '手机CPU'  135964
+select * from pdl_product_type where type = 3 AND parent_id = 135964 AND name = '苹果' 136326
+select * from pdl_product_type where type = 3 AND parent_id = 135964 AND name = '高通骁龙' 135964
+
+-手机
+select * from pdl_product_type where type = 1 and name = '手机通讯'  24346
+select * from pdl_product_type where type = 2 and name = '手机' 20937
+select * from pdl_product_type where type = 3 AND parent_id = 20937 AND name = '苹果(Apple)' 44299
+================ 大类 小类 品牌(ProductType) end ================
+
+
+================ 产品'高通 骁龙810'的参数项集合 start ================
+select type_id from pdl_product where id = 1071713 // 查询出品牌id: 135984
+select parent_id from pdl_product_type where id = 135984 // 查询出小类id: 135964
+select * from pdl_product_item where product_id = 1071713 and small_type_id = 135964 and key = 'CPU核心' // 根据小类id 查询出产品对应的参数项value
+select * from pdl_product_item where product_id = 1071713 and small_type_id = 135964 and key = 'GPU型号' // 同上
+================ 产品'高通 骁龙810'的参数项集合 end ================
+
+
+--URL
+local.pconline.com.cn:8081/product/intf/tiantitu/product_item.jsp?productId=1071713
+pdlib.pconline.com.cn/product/intf/tiantitu/product_item.jsp?productId=1071713
+
+
+--参考URL
+https://pdlib.pconline.com.cn/product/intf/app/product_pic_json.jsp?max=4&productId=1071713
