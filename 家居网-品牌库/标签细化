@@ -1,0 +1,33 @@
+https://product.pchouse.com.cn/brand/17324/
+
+
+
+================ 干 start ================
+https://product.pchouse.com.cn/brand/17324/
+https://product.pchouse.com.cn/list/b17324_c202.html
+https://product.pchouse.com.cn/list/b17324_c460.html
+================ 干 end ================
+
+
+
+================ 目标 start ================
+https://product.pchouse.com.cn/brand/17324/
+
+
+
+================ 目标 end ================
+
+
+
+
+
+
+
+【需求】
+家居网品牌馆“品类标签”目前直到二级类目，需要再延伸至三级类目（含跳转的产品筛选链接），根据后台品牌管理实际类目进行显示，部分品牌仍然只到二级类目，故原有的逻辑也要保留。
+例如：
+https://product.pchouse.com.cn/brand/17324/
+https://m.pchouse.com.cn/product/brand/17324/
+建材-门-平开门，目前只到“门”，三级类目“平开门”无法展示出来。
+
+对接开发：建峰
