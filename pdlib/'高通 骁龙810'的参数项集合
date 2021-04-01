@@ -27,3 +27,18 @@ pdlib.pconline.com.cn/product/intf/tiantitu/product_item.jsp?productId=1071713
 
 --参考URL
 https://pdlib.pconline.com.cn/product/intf/app/product_pic_json.jsp?max=4&productId=1071713
+
+
+================ 关联产品 start ================
+"pk"
+"pv"
+"smallTypeId"
+"callback"
+"pageSize"
+"productId"
+
+查询小类 select id from pdl_product_type where type = 2 and name = '手机'
+https://pdlib.pconline.com.cn/product/intf/tiantitu/product_list.jsp
+List<LadderProductVo> vos = productManager.find(paramItemKey, paramItemValue, smallTypeId, pageSize);
+================ 关联产品 end ================
+
