@@ -1,0 +1,43 @@
+--babylib
+
+
+--应用
+亲子网-母婴库(pcbaby-product)
+192.168.240.228
+
+
+https://m.pcbaby.com.cn/product/top/baidu/c43.html?1=1
+product.pcbaby.com.cn/top/baidu/c43.html?1=1
+top_product_list_baidu_mini.jsp
+
+10344 tengine 亲子网-母婴库(pcbaby-product) 192.168.218.72 8088 nginx.conf
+location ~ ^/BACK/.*\.html {
+	   limit_req zone=req_sameuri burst=10   nodelay;
+           limit_req zone=req_ip burst=10   nodelay;
+           limit_req zone=req_xf burst=10   nodelay;
+           limit_req zone=req_uri burst=10   nodelay;
+           limit_req zone=req_session burst=10   nodelay;
+	   rewrite ^/BACK/product/top/baidu/c(\d+)\.html$ /wap/top_product_list_baidu_mini.jsp?cId=$1 break;
+           rewrite /BACK(.*) $1 break;
+           proxy_pass          http://WEB_APP;
+           proxy_redirect      off;
+           proxy_set_header    Host             $host;
+           proxy_set_header    X-Real-IP        $remote_addr;
+           proxy_set_header    X-Forwarded-For  $proxy_add_x_forwarded_for;
+}
+
+
+192.168.218.72
+192.168.218.85
+
+192.168.237.176
+192.168.237.175
+
+
+
+--配置
+server 192.168.238.169:7070;
+server 192.168.239.24:7070;
+
+
+
