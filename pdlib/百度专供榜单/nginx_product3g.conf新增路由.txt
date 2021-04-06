@@ -18,6 +18,13 @@ location ~ ^/product/.*\.html {
 ================ 新增 end ================
 
 
+================ 参考亲子 nginx start ================
+亲子网-母婴库(pcbaby-product)
+10344 tengine 亲子网-母婴库(pcbaby-product) 192.168.218.72 8088 nginx.conf
+/wap/top_product_list_baidu_mini.jsp?cId=$1
+================ 参考亲子 nginx end ================
+
+
 --结果
 local.pconline.com.cn:8070/product/baidu/top/baidu_spec.jsp?cid=20937
 g.pconline.com.cn/product/baidu/top/baidu_spec.jsp?cid=20937
