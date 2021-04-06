@@ -1,0 +1,18 @@
+--排行榜首页
+https://g.pconline.com.cn/product/hot/
+
+
+https://g.pconline.com.cn/product/hot/mobile/
+
+
+================ 产品排行榜 start ================
+小类+价格
+小类+品牌+价格
+https://g.pconline.com.cn/product/hot/mobile/p169/
+https://g.pconline.com.cn/product/hot/mobile/huawei/p169/
+
+查询小类
+select id, pub_dir as path from pdl_product_type where type = 2
+查询品牌
+select id, pub_dir as path, parent_id from pdl_product_type where type = 3 and status = 1
+================ 产品排行榜 end ================
