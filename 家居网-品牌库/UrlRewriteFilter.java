@@ -76,8 +76,12 @@ public class UrlRewriteFilter implements Filter {
 	private static final String LIST_WAP_PATH = "/product/list_search/";
 	private static final String LIST_WAP_BRAND = "/product/list/brand/";
 	private static final Pattern WAP_TOP_PATTERN = Pattern.compile("/product/top/((b|c|n)?(\\d+)\\.html)?$"); // 排行榜
+	private static final Pattern SOUGOU_TOP_PATTERN = Pattern.compile("/product/sougou/top/b(\\d+)\\.html$");
 	private static final Pattern WAP_TOP_DETAIL_PATTERN = Pattern.compile("/product/top/item/(b|c|n)(\\d+)\\.html"); // 排行榜
 	private static final Pattern WAP_INDEX = Pattern.compile("/product(/[\\s\\S]*)");
+
+	private static final Pattern BAIDU_MINI_APP = Pattern.compile("/baidu/miniApp/(([\\w\\d_]+)\\.jsp)?$"); //
+
 	//品牌专区
 	private static final Pattern WAP_BRAND_ZQ = Pattern.compile("/product/brand/(\\d+)/(([\\w\\d_]+)\\.html)?$");
 	//--------------------------------------------【WAP END】-----------------------------------------------------
@@ -101,6 +105,8 @@ public class UrlRewriteFilter implements Filter {
 			IOException {
 		HttpServletRequest hRequest = ((HttpServletRequest) request);
 		HttpServletResponse hResponse = ((HttpServletResponse) response);
+
+		String queryString = hRequest.getQueryString();
 
 		String uri = hRequest.getRequestURI();
 		uri = uri.replaceAll("/+", "/");
@@ -746,6 +752,12 @@ public class UrlRewriteFilter implements Filter {
 			return;
 		}
 
+		matcher = BAIDU_MINI_APP.matcher(uri);
+		if (matcher.matches()) {
+			forwardBuffer.append("/jsp/intf/miniApp/" + matcher.group(1) + "?" + queryString);
+			goForward(forwardBuffer, request, response);
+			return;
+		}
 
 		// -----------------------------------------------【WAP页面START】------------------------------------------------
 		matcher = WAP_BRAND_ZQ.matcher(uri);
@@ -945,6 +957,16 @@ public class UrlRewriteFilter implements Filter {
 				path += "/brand_index.jsp";
 			}
 			path += (id > 0? "?cateId="+id : "");
+
+			forwardBuffer.append(path);
+			goForward(forwardBuffer, request, response);
+			return;
+		}
+
+		matcher = SOUGOU_TOP_PATTERN.matcher(uri);
+		if (matcher.matches()) {
+			int cateId = NumberUtils.toInt(matcher.group(1));
+			String path = "/jsp/wap/top/sougou/brand_index.jsp?cateId=" + cateId;
 
 			forwardBuffer.append(path);
 			goForward(forwardBuffer, request, response);
