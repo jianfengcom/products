@@ -1,2 +1,10 @@
 --有待解决
 https://g.pconline.com.cn/product/mobile/
+
+
+================ xindex start ================
+走 xindex
+
+参考houselib web/jsp/template/product/list.jsp
+query.matchs[4] = new MatchEQ(brandId);
+================ xindex end ================
