@@ -31,3 +31,11 @@ java通过selenium爬取js动态渲染的页面
 ================================ 3 ================================
 webmagic 多线程
 chromedriver
+
+
+F:/pacific/six/svn/pc_best/conf/dev/resin/app-default.xml
+F:/pacific/six/svn/pc_best/conf/dev/best_envirement.properties
+F:/pacific/six/svn/pc_best/conf/dev/db.properties
+
+F:/pacific/six/svn/pc_best/target
+F:/pacific/six/svn/pc_best/src

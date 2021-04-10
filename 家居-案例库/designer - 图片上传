@@ -1,0 +1,5 @@
+var uploader = new Uploader
+
+&command=1011003
+
+systemConfig.uploadPicUrl=http://dev2.pchouse.com.cn:9192/uploadcenter/

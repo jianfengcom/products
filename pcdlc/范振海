@@ -1,0 +1,16 @@
+
+
+http://192.168.238.160:8080/intf/developer/getNewApkLog.jsp?minute=60&type=1&size=300，这个url获取的数据就是需要上传的是吧
+
+
+这个只是获取还没同步到ftp的apk名, 根据apk名去找 /data1/devupload/web/apkdoanload 对应 的文件
+
+
+有张表是记录还没同步的apk, 这个url就是获取这张表的信息
+
+
+resin应该是把文件下载到10.35这个目录/data1/devupload/web/apkdoanload/
+
+wget_apk_file_and_sync_to_ftp-new-apk.sh
+
+192.168.230.240	192.168.246.68

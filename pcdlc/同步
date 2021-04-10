@@ -1,0 +1,8 @@
+
+
+SELECT * FROM `dl_client_master_vr_log` WHERE dl_master_id = 2810385 order by create_date desc
+
+15分钟
+getNewApkLogByFlag
+
+wget_apk_file_and_sync_to_ftp-new-apk.sh

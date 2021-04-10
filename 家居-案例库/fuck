@@ -4,6 +4,8 @@ http://svn.demo.pc.com.cn/svn/pclady_cosme/trunk/cosme3
 --target
 https://dingzhi.pchouse.com.cn/admin/index.jsp
 https://dingzhi.pchouse.com.cn/admin/designer/update.do?id=54270&_=1616653352307
+省份&城市
+http://t-dingzhi.pchouse.com.cn/admin/company/list.do?_=1617013099954
 
 localhost:8086/admin/index.jsp
 https://dingzhi.pchouse.com.cn/admin/designer/list.do
@@ -22,6 +24,7 @@ https://best.pconline.com.cn/admin/focusimage/create.do?pi=-1&_=1616646093679
 --参考 designer
 http://designer.pchouse.com.cn/admin/index.jsp
 http://designer.pchouse.com.cn/admin/designer/create.do?_=1616652411381
+http://designer.pchouse.com.cn/admin/company/list.do?_=1616986415320
 
 
 
@@ -29,6 +32,10 @@ http://designer.pchouse.com.cn/admin/designer/create.do?_=1616652411381
 https://dingzhi.pchouse.com.cn/admin/designer/list.do?_=1616732159040
 
 org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+
+--
+http://localhost:8086/admin/designerFollow/list.do
+q_eq_targetAccountId: 41540627
 
 
 

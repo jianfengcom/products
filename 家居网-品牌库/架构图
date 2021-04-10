@@ -1,0 +1,47 @@
+
+
+rewrite ^/item/([0-9]+)_detail\.html /item/$1.html permanent;
+        rewrite ^/item/([0-9]+)_picture\.html /item/$1.html permanent;
+        rewrite ^/item/([0-9]+)_comment\.html /item/$1.html permanent;
+        rewrite ^/list/f239.html http://product.pchouse.com.cn/weiyu/ permanent;
+        rewrite ^/brand$ http://product.pchouse.com.cn/brand/ permanent;
+
+https://product.pchouse.com.cn/list/b17324_c202.html
+product.pchouse.com.cn/item/726114_picture.html
+https://product.pchouse.com.cn/list/b17324_c202.html
+
+
+
+
+--
+https://product.pchouse.com.cn/item/726114_picture.html 301
+http://product.pchouse.com.cn/item/726114.html 301
+https://product.pchouse.com.cn/item/726114.html
+
+
+^/brand/(\d+)$
+product.pchouse.com.cn/brand/17324
+
+
+https://product.pchouse.com.cn/brand/17324/
+
+
+--gogogo
+/(brand)/((\d+)/((comment|introduction|)(_(\d+))?\.html)?)?
+
+UrlRewriteFilter
+web/jsp/template/brand/bigBrand.jsp
+
+web/jsp/template/product/list.jsp
+<!-- 二级分类及其对应的  三级分类 ${category.level }${ Category.LEVEL_MID }-->
+
+二级分类下子类
+SELECT id FROM lib_category WHERE parent_id = 202 and status=1 order by order_key asc
+
+
+
+SELECT DISTINCT(parent_id) FROM lib_category c,lib_product_entity p WHERE c.status = 1
+AND p.category_id = c.id AND p.brand_id = 17324 AND p.status = 9
+order by c.order_key desc
+
+https://product.pchouse.com.cn/list/b17324_c460.html

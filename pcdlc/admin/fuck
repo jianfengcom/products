@@ -1,0 +1,110 @@
+https://t-dl.pconline.com.cn/admin/batchAndroidClientMasterSpider.do
+
+审核通过
+
+--ClientMasterSpiderApp
+dl_client_master_spider_app
+爬取安卓临时数据-apk包信息
+
+--MasterAppExt
+dl_master_app_ext
+apk包信息
+
+--MasterInfoAndroid
+dl_master_info_android
+安卓栏目属性扩展
+
+--FrontMaster
+dl_front_master
+
+--
+MasterLink
+dl_link
+
+--MasterPic
+dl_master_pic
+截图
+
+--ClientMasterSpiderBlack
+黑名单
+
+
+
+Android
+
+根据爬虫主表ID 查找关联的ClientMasterSpiderApp 对象
+根据packageName, name 查找MasterAppExt对象
+若MasterAppExt对象为null, 新建一个MasterInfoAndroid对象, 新建一个MasterInfo对象, 如果非草稿(masterInfo.draft)就插入dl_front_master
+向表dl_master_keyword_list插入数据，默认关键字: 名称或小类
+向表dl_desc插入数据(软件简介 更新日志 编辑点评)
+向表dl_link插入数据
+"http://ftp-new-apk.pconline.com.cn/pub/download/202103/pconline" + apkFileName
+
+--apkFileName
+1615856642688.apk
+SELECT apk_file_name FROM dl_client_master_spider_app WHERE dl_client_master_spider_id = 5382164
+
+向表dl_master_app_ext 插入数据
+向表dl_master_pic插入数据
+创建黑名单ClientMasterSpiderBlack
+将安卓转化为电脑版, 若正式库存在同名(dl_front_master.name)或同包名(dl_master_dnb_ext.package)则不转化为电脑版
+若审核库存在同名同包名(dl_client_master_spider_dnb.package)则也不转化为电脑版
+
+
+
+
+--dl_link.link_url1
+http://ftp-new-apk.pconline.com.cn/pub/download/202103/pconline1615856642688.apk (不能浏览器直接下载)
+
+//电脑软件
+//这里返回太平洋的四组服务器
+linkRegx
+linkregx=ftp-fj:(\u672c\u5730\u79fb\u52a8)@ftp:(\u672c\u5730\u7f51\u901a)@ftp-idc:(\u672c\u5730\u7535\u4fe11)@ftp-dg:(\u672c\u5730\u7535\u4fe12)@ftpcnc-p2sp:(\u5b98\u65b9\u4e0b\u8f7d)~ftpgz13:(\u7f51\u901a)@ftp13-idc:(\u7535\u4fe1\u4e00)@ftp13-dg:(\u7535\u4fe1\u4e8c)~ftpgz3:(\u7f51\u901a)@ftp3-idc:(\u7535\u4fe1\u4e00)@ftp3-dg:(\u7535\u4fe1\u4e8c)~ftpgz5:(\u7f51\u901a)@ftp5-idc:(\u7535\u4fe1\u4e00)@ftp5-dg:(\u7535\u4fe1\u4e8c)~ftp-new-pc:(\u672c\u5730\u7f51\u901a)
+
+--ftp-fj:(\u672c\u5730\u79fb\u52a8)@ftp:(\u672c\u5730\u7f51\u901a)@ftp-idc:(\u672c\u5730\u7535\u4fe11)@ftp-dg:(\u672c\u5730\u7535\u4fe12)@ftpcnc-p2sp:(\u5b98\u65b9\u4e0b\u8f7d)
+ftp-fj:(\u672c\u5730\u79fb\u52a8)
+ftp:(\u672c\u5730\u7f51\u901a)
+ftp-idc:(\u672c\u5730\u7535\u4fe11)
+ftp-dg:(\u672c\u5730\u7535\u4fe12)
+ftpcnc-p2sp:(\u5b98\u65b9\u4e0b\u8f7d)
+--ftpgz13:(\u7f51\u901a)@ftp13-idc:(\u7535\u4fe1\u4e00)@ftp13-dg:(\u7535\u4fe1\u4e8c)
+ftpgz13:(\u7f51\u901a)
+ftp13-idc:(\u7535\u4fe1\u4e00)
+ftp13-dg:(\u7535\u4fe1\u4e8c)
+--ftpgz3:(\u7f51\u901a)@ftp3-idc:(\u7535\u4fe1\u4e00)@ftp3-dg:(\u7535\u4fe1\u4e8c)
+ftpgz3:(\u7f51\u901a)
+ftp3-idc:(\u7535\u4fe1\u4e00)
+ftp3-dg:(\u7535\u4fe1\u4e8c)
+--ftpgz5:(\u7f51\u901a)@ftp5-idc:(\u7535\u4fe1\u4e00)@ftp5-dg:(\u7535\u4fe1\u4e8c)
+ftpgz5:(\u7f51\u901a)
+ftp5-idc:(\u7535\u4fe1\u4e00)
+ftp5-dg:(\u7535\u4fe1\u4e8c)
+--ftp-new-pc:(\u672c\u5730\u7f51\u901a)
+ftp-new-pc:(\u672c\u5730\u7f51\u901a)
+
+
+
+
+
+--ftp
+SELECT link_url1 FROM dl_link WHERE dl_master_id = 1286173
+http://ftp-new-apk.pconline.com.cn/pub/download/202103/pconline1615799684501.apk (不能浏览器直接下载)
+
+
+--apk下载链接(暂存盘)
+掌赋
+id: 5382164
+http://devupload.pc.com.cn/apkdoanload/1615856642688.apk (能浏览器直接下载)
+
+
+
+publisher
+version
+
+
+
+
+
+
+
+

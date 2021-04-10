@@ -1,0 +1,29 @@
+http://mall.pconline.com.cn/api/tiantitu/products?ladderId=1
+local.pconline.com.cn:8082/api/tiantitu/products?ladderId=1
+
+痛点
+1. json结果 null
+2. cpu信息
+3. 小类
+
+
+--参数对
+产品 - 小类 - 参数项名称 - 参数项的值
+
+-- ios 电脑版
+
+
+
+
+
+
+
+
+select type_id from pdl_product where id = 1176128
+=>  45039
+
+select name, parent_id from pdl_product_type  where id = 45039
+=>  Intel(英特尔)  45038
+
+select name, parent_id from pdl_product_type  where id = 45038
+=>  笔记本CPU  35310

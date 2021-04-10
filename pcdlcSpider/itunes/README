@@ -1,0 +1,19 @@
+itunes数据爬取
+
+11 18 * * *
+192.168.241.116
+
+
+
+-- Itunes 列表监控
+ItunesListMonitor
+
+
+
+https://apps.apple.com/cn/genre/ios-you-xi-mo-ni-you-xi/id7015;https://apps.apple.com/cn/genre/ios-you-xi-xiao-you-xi/id7018;
+
+https://apps.apple.com/cn/app/id1523804885
+https://apps.apple.com/cn/app/id1233664106
+
+https://apps.apple.com/cn/app/id1546973598
+https://apps.apple.com/cn/app/id1557466978

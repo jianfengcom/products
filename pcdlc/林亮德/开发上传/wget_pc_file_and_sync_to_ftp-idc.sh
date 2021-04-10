@@ -3,7 +3,7 @@
 # */10 * * * * 
 
 
-dir=/data/sh/pc
+dir=/data/sh/pc/pc_file/pc_file_2021-03-25_16-40
 url_save_dir=${dir}/pc_file
 url_save_file=${url_save_dir}/pc_file_$(date "+%F_%H-%M")
 pc_dir=/data1/devupload/web/pcdownload

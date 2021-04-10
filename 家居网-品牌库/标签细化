@@ -8,7 +8,15 @@ https://product.pchouse.com.cn/list/b17324_c202.html
 https://product.pchouse.com.cn/list/b17324_c460.html
 ================ 干 end ================
 
+if (uri.indexOf("/list/") != -1) {
 
+
+
+localhost:81/list/b17324_c460.html
+localhost:81/list/brand/17324/
+
+/jsp/template/product/list.jsp?&bId=17324&cId=460
+<!-- 筛选面包屑 -->
 
 ================ 目标 start ================
 https://product.pchouse.com.cn/brand/17324/
@@ -31,3 +39,8 @@ https://m.pchouse.com.cn/product/brand/17324/
 建材-门-平开门，目前只到“门”，三级类目“平开门”无法展示出来。
 
 对接开发：建峰
+
+
+
+
+UrlRewriteFilter

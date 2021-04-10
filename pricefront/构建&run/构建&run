@@ -9,15 +9,15 @@
 
 4.install
 
-5.idea集成resin.conf
+5.修改xindex_server.bat, 并双击运行
+
+6.idea集成resin.conf
 ================ 步骤 end ================
 
 --jar包 (pom.xml 和 WEB-INF/lib)
 
 --痛点
 price-front.bat 用不上
-
-
 
 
 
