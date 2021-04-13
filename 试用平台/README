@@ -1,67 +1,23 @@
-账号: 15313877767
-密码: H15313877767
-
-
-================ # start ================
-https://try.pconline.com.cn/
-https://try.pconline.com.cn/act-2621.html
-================ # end ================
-
+--本地
 local.pconline.com.cn:9991/index.jsp
-local.pconline.com.cn:9991/act-1321.html
+local.pconline.com.cn:9991
 
 
-...
-申请用户
-
-
---
-https://try.pconline.com.cn/act-2621.html
-192.168.242.122:8080/activity.jsp?activityId=2621
-
-192.168.242.122:8080/activity.jsp?activityId=2613
-192.168.242.122:8080/activity.jsp?activityId=2621
-
-local.pconline.com.cn:9991/activity.jsp?activityId=2621
-
-
-https://try.pconline.com.cn/action/systemNotice/getUserThreeMessage.jsp
-
-121 122
-82 76
-48
-
+--log
 cd /data/PRG/resin-pro-3.1.8_pconline-try/log
 
-tail -200f stdout.log
-tail -200f stderr.log
-[04-12 17:06:49.636]
-[04-12 17:05:14.706
 
+================ #众测平台页面 start ================
+https://try.pconline.com.cn/act-2631.html
+https://try.pconline.com.cn/submitApply-2631.html
+https://try.pconline.com.cn/receivedApply-2631.html
 
-================ 错误日志 start ================
-https://try.pconline.com.cn/action/systemNotice/getUserThreeMessage.jsp
-
-
-{
-code: "success",
-data: [
-{
-content: "众测申请已提交。你已申请《摩飞 二合一 气泡原...》众测，审核结果会在申请结束后的3天内公布，请留意消息通知。",
-notifyTime: "4天前",
-url: "//best.pconline.com.cn/my/notice/"
-}
-],
-message: "查询系统通知成功",
-moreMessageUrl: "//best.pconline.com.cn/my/notice/",
-total: 1
-}
-
-
-{
-code: "success",
-message: "暂无消息",
-moreMessageUrl: "//best.pconline.com.cn/my/notice/",
-total: 0
-}
-================ 错误日志 start ================
+产品页面
+try.pconline.com.cn/activity.jsp?activityId=2631
+申请页面
+try.pconline.com.cn/submitApply.jsp?activityId=2631
+申请提交后页面
+try.pconline.com.cn/receivedApply.jsp?activityId=2631
+试用用户表(try_user)没有对应的记录, 调用创建接口
+(best)/intf/user/addUserByAccountId.jsp
+================ #众测平台页面 end ================
