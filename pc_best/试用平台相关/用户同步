@@ -1,0 +1,29 @@
+--同步接口
+http://local.pconline.com.cn:9991/intf/try/syncUser.jsp?start=2021-02-09&end=2021-04-13
+https://best.pconline.com.cn/intf/try/syncUser.jsp?start=2021-02-09&end=2021-04-13
+
+--解决
+intf/try/syncUser.jsp
+
+--问题概述
+用户登录试用平台(https://try.pconline.com.cn/)后, 点开众测产品页(https://try.pconline.com.cn/act-2641.html#ad=8462), 出现404,
+原因是试用用户表(try_user)没有该用户的对应用户,
+
+--流程
+RabbitMQ 的监听器 监听着"mq.user.queue"队列, 一旦GeliDao.update(User) 或 GeliDao.create(User), 就发送消息
+发送端:cn.pconline.best.aop.UserChangeAspect.after(JoinPoint pjp)
+接收端(pc_try):cn.pconline.pctry.mq.SyncUpdateUserListener.onMessage(Message msg)
+
+--错误位置(pc_try)
+user = userService.find( userId );
+long userId = userService.getUser( account );
+
+--错误日志
+org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+at cn.pconline.pctry.entity.Apply.getUser
+
+--todo
+RabbitMQ
+@After("execution(* org.gelivable.dao.GeliDao.update(java.lang.Object)) " +
+    "|| execution(* org.gelivable.dao.GeliDao.update(java.lang.Object, java.lang.String)) " +
+    "|| execution(* org.gelivable.dao.GeliDao.create(java.lang.Object))")

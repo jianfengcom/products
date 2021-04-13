@@ -1,5 +1,6 @@
 ================ 步骤 start ================
 1.jdk1.6
+ps: cmd - java -version
 
 2.app-resin-conf.xml
 
