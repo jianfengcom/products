@@ -1,2 +1,8 @@
 --The URL contains escaped bytes unsupported by the UTF-8 encoding. CSDN
 本地接口不要用https
+
+--登录成功后会跳转到 https, 应该跟passport 的跳转规则有关
+
+--后台管理
+http://local.pconline.com.cn:9991/admin/login.jsp
+http://local.pconline.com.cn:9991/admin/index.jsp
