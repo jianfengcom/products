@@ -1,2 +1,14 @@
---admin
+================ admin start ================
+--登录
 http://local.pconline.com.cn:8080/admin/
+http://mall.pconline.com.cn/admin/
+
+--服务器
+192.168.244.23:8081
+192.168.244.24:8081
+192.168.244.25:8081
+192.168.244.26:8081
+
+--日志
+/data/web/pconline-baidu-mall-admin/logs
+================ admin end ================
