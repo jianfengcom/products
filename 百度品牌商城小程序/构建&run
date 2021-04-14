@@ -1,0 +1,15 @@
+================ 步骤 start ================
+1.jdk1.8
+
+2.cn.pconline.pcloud.PCloudApplication
+
+3.generatorConfig.xml (自动创建新的实体 service)
+<table tableName="ti_ladder_product_new" domainObjectName="LadderProductNew" enableInsert="true" enableCountByExample="true"
+    enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true"
+    selectByExampleQueryId="true">
+</table>
+
+
+
+
+
