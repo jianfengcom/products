@@ -1,0 +1,24 @@
+--苹果手机
+bigBrandId == 172 && brandId == 44299
+
+
+--苹果手机
+bigBrandId == 172 && brandId == 21920
+
+
+================ 维修页面 start ================
+https://g.pconline.com.cn/product/repair/apple/mobile/huhehaote.html
+https://product.pconline.com.cn/repair/apple/mobile/huhehaote.html
+http://brand.pconline.com.cn/repair/172_44299_1_2330.html
+
+https://g.pconline.com.cn/product/repair/tabletpc/all/
+https://g.pconline.com.cn/product/repair/notebook/all/
+
+samsung
+huawei
+
+--pdlib
+http://local.pconline.com.cn:8081/product/repair/huawei/mobile/ningbo.html
+--3g
+http://local.pconline.com.cn:8070/product/repair/apple/mobile/ningbo.html
+================ 维修页面 end ================
