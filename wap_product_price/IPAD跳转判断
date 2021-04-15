@@ -4,17 +4,30 @@ https://shimo.im/docs/cJRCDTT6xDCt9WV8/read
 
 <script src="//www.pconline.com.cn/3g/wap2013/intf/1305/intf2739.js" class=" defer"></script>
 <script type="text/javascript">
-deviceJump.init({
-"wap":"",
-"wap_3g":"//g.pconline.com.cn/product/hot/mobile/",
-"main":"//product.pconline.com.cn/hot/mobile/"
-});
+    deviceJump.init({
+        "wap":"",
+        "wap_3g":"//g.pconline.com.cn/product/hot/mobile/",
+        "main":"//product.pconline.com.cn/hot/mobile/"
+    });
 </script>
 
 
 <script src="//www.pconline.com.cn/3g/wap2013/intf/1305/intf2739.js" class=" defer"></script>
 <script type="text/javascript">
-deviceJump.init({
-"ipad":"//product.pconline.com.cn/hot/mobile/"
-});
+    deviceJump.init({
+        "ipad":"//product.pconline.com.cn/hot/mobile/"
+    });
 </script>
+
+
+================ 已调整页面 start ================
+https://g.pconline.com.cn/product/mobile/apple/1124166.html
+
+https://g.pconline.com.cn/product/hot/mobile/brandtop/
+
+https://g.pconline.com.cn/product/hot/mobile/
+
+https://g.pconline.com.cn/product/repair/mobile/all/
+
+https://g.pconline.com.cn/product/repair/samsung/mobile/quanguo.html
+================ 已调整页面 end ================

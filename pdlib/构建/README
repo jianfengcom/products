@@ -1,0 +1,13 @@
+--jdk1.6
+
+
+--error1
+com.caucho.config.LineConfigException: WEB-INF/web.xml:25: `cn.com.pconline.core.product.web.servlet.ProductServlet' is not a known servlet.  Servlets belong in the classpath, often in WEB-INF/classes.
+解决方式: way1.jpg
+
+
+--D:\codehub\idea_16\pdlib\src\java 目录下得配置文件
+如果没有在D:\codehub\idea_16\pdlib\src\web_product\WEB-INF\classes 目录下生成
+解决方式: 直接拷贝
+
+
