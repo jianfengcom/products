@@ -1,0 +1,11 @@
+--jdk1.6
+
+
+--WEB-INF/classes
+
+
+--D:\codehub\idea_16\wap_product_price\java 目录下得配置文件
+如果没有在D:\codehub\idea_16\wap_product_price\touch_product_price\WEB-INF\classes 目录下生成
+解决方式: 直接拷贝
+
+
