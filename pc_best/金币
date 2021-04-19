@@ -1,0 +1,11 @@
+--20777372
+SELECT * FROM pcbest_topic WHERE topicId = 10113343 10113349
+
+
+SELECT * FROM pcbest_topic_publish WHERE topicId = 10113343 10113349
+
+
+SELECT * FROM pcbest_user WHERE userId = 20777372 47274571
+
+
+pcbest_money_log
