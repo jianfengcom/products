@@ -1,0 +1,1 @@
+SELECT * FROM dl_master_dnb_ext WHERE package = 'com.tencent.nmrqhn' AND status = 1  LIMIT 0,1
