@@ -1,0 +1,66 @@
+{
+  "tbk_dg_material_optional_response": {
+    "result_list": {
+      "map_data": [
+        {
+          "category_id": 1629,
+          "category_name": "大码女装",
+          "commission_rate": "600",
+          "commission_type": "ZX",
+          "coupon_amount": "3",
+          "coupon_end_time": "2021-05-15",
+          "coupon_id": "72a2926a1c524c82ad0c68c6ac45f249",
+          "coupon_info": "满10元减3元",
+          "coupon_remain_count": 44488,
+          "coupon_share_url": "//uland.taobao.com/coupon/edetail?e=MVcGI1lFWI4NfLV8niU3RxrSI%2FOabn6qNg4Gqf8CT4DPQboYUQE71bewUOIJp8q4mMHpNfYdHdDtZpCERXJPGrOgQXzx3jOj0vkJu2gKSWRm1Y1FIWjSqtp2qW%2FuVAHNyEmVEmcAKi7pXyhzOxdZ8Wf0sdnq%2BplkijDHWc1U%2B7WfXar14c%2BF2BRejvUk6PEIvB81xIIevPU%2Bf%2BpidCDmISUzVkkdwsIm&&app_pvid=59590_33.3.236.95_763_1619024021433&ptl=floorId:2836;app_pvid:59590_33.3.236.95_763_1619024021433;tpp_pvid:100_11.229.195.157_17549_631619024021437163&xId=2QntQu1YNKdscndhCda8ha4YsRrSvQ4vDIlSEkyYcQuYbn7HS3PkE6xoJyHiMvcoj11EwnpIXLLTBRmm0zNehualTgwtay9oWGmrgH8xpWVO&union_lens=lensId%3AMAPI%401619024021%402103ec5f_07e7_178f55a07cc_3a14%4001",
+          "coupon_start_fee": "10",
+          "coupon_start_time": "2021-03-19",
+          "coupon_total_count": 50000,
+          "include_dxjh": "true",
+          "include_mkt": "false",
+          "info_dxjh": "{}",
+          "item_description": "",
+          "item_id": 571660032981,
+          "item_url": "https://item.taobao.com/item.htm?id=571660032981",
+          "level_one_category_id": 16,
+          "level_one_category_name": "女装/女士精品",
+          "nick": "田金海rou",
+          "num_iid": 571660032981,
+          "pict_url": "https://img.alicdn.com/bao/uploaded/i3/2129495986/TB2tT4oyuSSBuNjy0FlXXbBpVXa_!!2129495986.jpg",
+          "presale_deposit": "0",
+          "presale_end_time": 0,
+          "presale_start_time": 0,
+          "presale_tail_end_time": 0,
+          "presale_tail_start_time": 0,
+          "provcity": "广东 广州",
+          "real_post_fee": "0.00",
+          "reserve_price": "129",
+          "seller_id": 2129495986,
+          "shop_dsr": 47890,
+          "shop_title": "一线潮流大码女装",
+          "short_title": "胖妹妹百搭大码棉麻200斤休闲裤",
+          "small_images": {
+            "string": [
+              "https://img.alicdn.com/i1/2129495986/TB27zVIyxSYBuNjSspjXXX73VXa_!!2129495986.jpg",
+              "https://img.alicdn.com/i2/2129495986/TB2fA4syr5YBuNjSspoXXbeNFXa_!!2129495986.jpg",
+              "https://img.alicdn.com/i3/2129495986/TB2AFlLyuySBuNjy1zdXXXPxFXa_!!2129495986.jpg",
+              "https://img.alicdn.com/i2/2129495986/TB22o1gyDlYBeNjSszcXXbwhFXa_!!2129495986.jpg"
+            ]
+          },
+          "superior_brand": "0",
+          "title": "胖妹妹休闲裤百搭大码棉麻哈伦裤女200斤胖妞高腰宽松显瘦九分裤",
+          "tk_total_commi": "31.48",
+          "tk_total_sales": "9",
+          "url": "//s.click.taobao.com/t?e=m%3D2%26s%3DutN6SBxGdG8cQipKwQzePOeEDrYVVa64lwnaF1WLQxlyINtkUhsv0OxUDHTKV%2BZfDhMXFvQbiGRwXe2RFZh40x7C3f%2B4RWyNBPuqutUHIo%2BB1NEJxSbK29lNMcTmgxN01GPduzu4oNpKs3JyeAyw%2BlOA1dwm6%2FXdOXJ7lqtrQx6gH2V2l4koaY5ccPbjikaoxgxdTc00KD8%3D&scm=null&pvid=100_11.229.195.157_17549_631619024021437163&app_pvid=59590_33.3.236.95_763_1619024021433&ptl=floorId:2836;originalFloorId:2836;pvid:100_11.229.195.157_17549_631619024021437163;app_pvid:59590_33.3.236.95_763_1619024021433&xId=2QntQu1YNKdscndhCda8ha4YsRrSvQ4vDIlSEkyYcQuYbn7HS3PkE6xoJyHiMvcoj11EwnpIXLLTBRmm0zNehualTgwtay9oWGmrgH8xpWVO&union_lens=lensId%3AMAPI%401619024021%402103ec5f_07e7_178f55a07cc_3a14%4001",
+          "user_type": 0,
+          "volume": 13,
+          "white_image": "https://img.alicdn.com/bao/uploaded/TB12dvwXaSs3KVjSZPiSuwsiVXa.jpg",
+          "x_id": "2QntQu1YNKdscndhCda8ha4YsRrSvQ4vDIlSEkyYcQuYbn7HS3PkE6xoJyHiMvcoj11EwnpIXLLTBRmm0zNehualTgwtay9oWGmrgH8xpWVO",
+          "zk_final_price": "58"
+        }
+      ]
+    },
+    "total_results": 1,
+    "request_id": "5y30p3gr4dui"
+  }
+}

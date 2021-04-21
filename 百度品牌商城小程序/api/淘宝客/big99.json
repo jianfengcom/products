@@ -1,0 +1,66 @@
+{
+  "tbk_dg_material_optional_response": {
+    "result_list": {
+      "map_data": [
+        {
+          "category_id": 1629,
+          "category_name": "大码女装",
+          "commission_rate": "1100",
+          "commission_type": "MKT",
+          "coupon_amount": "5",
+          "coupon_end_time": "2021-04-30",
+          "coupon_id": "8af06b3625cc4e28b57cfad0233ffdf2",
+          "coupon_info": "满99元减5元",
+          "coupon_remain_count": 84827,
+          "coupon_share_url": "//uland.taobao.com/coupon/edetail?e=5TkGv7BiNn8NfLV8niU3RxrSI%2FOabn6qNg4Gqf8CT4AKuDLwELihncBHPnNhtx9d2YhVPN3cmx0SLk8oPKG%2B2%2BDkcoY0pVFkw5tB9y2V7QFWKmm0pG265PNQ2no69YZJ74f14EuriVmA5wAaFHMFpYpw94D%2Fgbqca9smZp5DuXbQZ47Mmh70skGlmfJGHnwjyUxONJCwrimdSoYdoEE2iA%3D%3D&amp;&amp;app_pvid=59590_33.7.235.231_846_1619019754649&amp;ptl=floorId:2836;app_pvid:59590_33.7.235.231_846_1619019754649;tpp_pvid:100_11.30.123.81_43373_241619019754653962&amp;xId=6BniRwYgoeJMNZGTUT4Y5NBFfPYsJ7wlq3Vz8n80bqzNQ38YhUKBgbXAuhM4Y5KOvx5O0RyqS2DZf7mDlZbgS30zG0qvkzRqRo40RVNOIDxl&amp;union_lens=lensId%3AMAPI%401619019754%402107ebe7_07f1_178f518ecb0_83c8%4001",
+          "coupon_start_fee": "99",
+          "coupon_start_time": "2021-04-15",
+          "coupon_total_count": 100000,
+          "include_dxjh": "true",
+          "include_mkt": "true",
+          "info_dxjh": "{}",
+          "item_description": "",
+          "item_id": 589905674234,
+          "item_url": "https://item.taobao.com/item.htm?id=589905674234",
+          "level_one_category_id": 16,
+          "level_one_category_name": "女装/女士精品",
+          "nick": "bumenylee",
+          "num_iid": 589905674234,
+          "pict_url": "https://img.alicdn.com/bao/uploaded/i3/75371877/O1CN01ZgZx4K1PjhvMPdTSu_!!75371877.jpg",
+          "presale_deposit": "0",
+          "presale_end_time": 0,
+          "presale_start_time": 0,
+          "presale_tail_end_time": 0,
+          "presale_tail_start_time": 0,
+          "provcity": "广东 广州",
+          "real_post_fee": "0.00",
+          "reserve_price": "99",
+          "seller_id": 75371877,
+          "shop_dsr": 48365,
+          "shop_title": "小草宽松定制",
+          "short_title": "大码女装春秋季2021年新款mm牛仔裤",
+          "small_images": {
+            "string": [
+              "https://img.alicdn.com/i4/75371877/O1CN01ol2yEt1PjhvJob95s_!!75371877.jpg",
+              "https://img.alicdn.com/i2/75371877/O1CN01LzvDkg1PjhvMXBKZC_!!75371877.jpg",
+              "https://img.alicdn.com/i1/75371877/O1CN01meNJ3I1PjhvMOSpJg_!!75371877.jpg",
+              "https://img.alicdn.com/i3/75371877/O1CN01ZigWfe1Pjhx4pu4F7_!!75371877.jpg"
+            ]
+          },
+          "superior_brand": "0",
+          "title": "大码女装牛仔裤春秋季2021年新款宽松百搭胖妹妹mm盐系女日系裤子",
+          "tk_total_commi": "2391.02",
+          "tk_total_sales": "266",
+          "url": "//s.click.taobao.com/t?e=m%3D2%26s%3DoqWq4DGVhIscQipKwQzePOeEDrYVVa64lwnaF1WLQxlyINtkUhsv0I%2FXmhy0IfW7cnnKp7vRkY9wXe2RFZh40x7C3f%2B4RWyNBPuqutUHIo%2BB1NEJxSbK29lNMcTmgxN01GPduzu4oNo9FKniFdcw1JxlUEmVTKBm5JFodVQRY1uizgHAbryg1bjO1A27UpwHPNJn2dG%2FVwaiZ%2BQMlGz6FQ%3D%3D&amp;scm=null&amp;pvid=100_11.30.123.81_43373_241619019754653962&amp;app_pvid=59590_33.7.235.231_846_1619019754649&amp;ptl=floorId:2836;originalFloorId:2836;pvid:100_11.30.123.81_43373_241619019754653962;app_pvid:59590_33.7.235.231_846_1619019754649&amp;xId=6BniRwYgoeJMNZGTUT4Y5NBFfPYsJ7wlq3Vz8n80bqzNQ38YhUKBgbXAuhM4Y5KOvx5O0RyqS2DZf7mDlZbgS30zG0qvkzRqRo40RVNOIDxl&amp;union_lens=lensId%3AMAPI%401619019754%402107ebe7_07f1_178f518ecb0_83c8%4001",
+          "user_type": 0,
+          "volume": 633,
+          "white_image": "https://img.alicdn.com/bao/uploaded/TB1eQXNQAvoK1RjSZPfSutPKFXa.jpg",
+          "x_id": "6BniRwYgoeJMNZGTUT4Y5NBFfPYsJ7wlq3Vz8n80bqzNQ38YhUKBgbXAuhM4Y5KOvx5O0RyqS2DZf7mDlZbgS30zG0qvkzRqRo40RVNOIDxl",
+          "zk_final_price": "99"
+        }
+      ]
+    },
+    "total_results": 1,
+    "request_id": "zimu967fvukh"
+  }
+}
