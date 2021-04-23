@@ -1,0 +1,46 @@
+--mc 配置位置
+192.168.242.79:8080
+/data/web/pconline-dl/WEB-INF/applicationContext.xml 中的 /data/pc-config/pcdlc_envirement.properties
+
+
+--查看mc服务器 状态
+xmcstat -i '192.168.237.192:11212'
+
+
+================ SQL start ================
+SELECT * FROM dl_master_info WHERE dl_master_id IN (991, 992)
+SELECT * FROM dl_log WHERE id IN (1, 2)
+
+找个机会删了吧
+================ SQL end ================
+
+
+================ 标记 start ================
+标记: ##
+找个机会删了吧
+
+MasterController
+MasterService
+MasterLogService
+================ 标记 end ================
+
+
+================ Druid start ================
+192.168.242.79:8080/druid/login.html
+pcdlc
+pcdlc2018!@
+================ Druid end ================
+
+
+================ memcache 命令行操作 start ================
+telnet 192.168.238.162 11211
+telnet 192.168.242.70 11211
+telnet 192.168.237.193 11212
+get MasterInfo-991
+================ memcache 命令行操作 end ================
+
+
+
+
+
+
