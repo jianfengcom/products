@@ -1,0 +1,52 @@
+1---2 * * * * /home/Agent/sbin/resin_logcal.py >/dev/null 2>&1
+2---
+3---
+4---
+5---
+6---
+7---
+8---
+9---* * * * * /home/Agent/sbin/cron_init.sh >/dev/null 2>&1
+10---
+11---
+12---
+13---###global_ssi
+14---15 * * * * /var/PROGRAM/MANAGEMENT/modules/xbash/xglobalssi.sh sync >/dev/null 2>&1
+15---
+16---# MONITOR IV
+17---* * * * * /var/PROGRAM/MANAGEMENT/bin/monitor.sh >& /tmp/.monitor.log
+18---
+19---
+20---##### PERFORMANCE MONITOR 3.8.9
+21---*/5 * * * * /var/PROGRAM/perf_mon/monitor.sh >/dev/null 2>&1
+22---
+23---## m.pconline start
+24---# 商城前台3台服务器
+25---# 百度sitemap，seo需求，每天一次 @2012.04.18 by 廖俊强
+26---1 8 * * * wget -S --no-proxy --spider -t 1 -T 30 "http://localhost:8082/task/create_news_xml.jsp?pageSize=10000&pageNum=1&fileNum=8" >/dev/null 2>&1
+27---
+28---# 商城前台3台服务器同步239.96的索引文件,4:30同步，同步完之后重启服务器(重新加载索引文件)
+29---# 必须错开3台机的执行时间，避免3台同时不能服务
+30---31 4 * * * /data/crontab/pconline-m/sync_eyp_index.sh index >/tmp/sync_index.log 2>&1
+31---## m.pconline end
+32---
+33---1 9 * * * crontab -l |awk '/pconline start/,/ end/' >/data/crontab/pconline-m/239.69.crond.root.txt
+34---
+35---## 检查支付宝域名变化
+36---#*/30 * * * * /data/crontab/pconline-m/chk_alipay_domain.sh >/dev/null 2>&1
+37---
+38---# resin_accesslog定时清理
+39---10 1 * * * /usr/bin/find /data/resin_logs/ -name "access.log.*.gz" -mtime +31 -exec rm -rf {} \;
+40---
+41---# 238.43已经停止的计划任务
+42---## m.pconline start
+43---# 产品增量索引，每30分钟一次
+44---#1-59/30 10-22 * * * wget -S --no-proxy --spider -t 1 -T 30 "http://localhost:8082/servlet/BuildIndex?target=product&type=2&indexFileName=/data/web/pconline-m/eyp_index/product" >/dev/null 2>&1
+45---# 店铺增量索引，每30分钟一次
+46---#*/30 10-22 * * * wget -S --no-proxy --spider -t 1 -T 30 "http://localhost:8082/servlet/BuildIndex?target=shop&type=2&indexFileName=/data/web/pconline-m/eyp_index/shop/" >/dev/null 2>&1
+47---## m.pconline end
+48---## chk load
+49---#*/12 * * * * /data/crontab/pconline-m/chk_load_restart.sh >/dev/null 2>&1
+50---
+51---30 23 * * * /usr/bin/find /data/PRG/resin-pro-3.1.4_pconline-m/log/* -name "*.log.*" -mtime +29 -exec rm -rf {} \;
+52---40 23 * * * /usr/bin/find /data/BAK/pconline-m/* -name "*.tgz" -mtime +14 -exec rm -rf {} \;
