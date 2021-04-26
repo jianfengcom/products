@@ -1,0 +1,32 @@
+--axure 文档
+http://192.168.17.42/%E7%A4%BE%E7%BE%A4%E5%B7%A5%E5%85%B7v1.1/#id=4u8bkl&p=%E9%A2%86%E5%88%B8%E5%B7%A5%E5%85%B7%E9%A6%96%E9%A1%B5&g=1
+
+--local
+http://localhost:8082/api/tbk/dgMaterialOptional?adzoneId=110268500499&q=https://item.taobao.com/item.htm?id=589905674234
+http://localhost:8082/api/tbk/dgMaterialOptional?adzoneId=110268500499&q=https://item.taobao.com/item.htm?id=571660032981
+
+================ 线上 start ================
+--淘宝客-推广者-物料搜索
+taobao.tbk.dg.material.optional
+http://mall.pconline.com.cn/api/tbk/dgMaterialOptional?adzoneId=110268500499&q=女装
+
+--淘宝客-推广者-物料精选
+taobao.tbk.dg.optimus.material
+http://mall.pconline.com.cn/api/tbk/dgOptimusMaterial?adzoneId=110268500499&materialId=27446
+================ 线上 end ================
+
+--BigDecimal
+https://blog.csdn.net/zhanghan18333611647/article/details/97621028
+
+
+================ 淘宝客API start ================
+https://aff-open.taobao.com/#!/document
+taobao.tbk.dg.material.optional
+taobao.tbk.dg.optimus.material
+
+28279473
+d97bcf68afb1e80651a3abacd581b146
+
+--adzone_id
+110268500499
+================ 淘宝客API end ================
