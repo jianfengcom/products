@@ -1,0 +1,111 @@
+1---2 * * * * /home/Agent/sbin/resin_logcal.py >/dev/null 2>&1
+2---
+3---
+4---
+5---
+6---
+7---* * * * * /home/Agent/sbin/cron_init.sh >/dev/null 2>&1
+8---
+9---#
+10---
+11---###global_ssi
+12---3 * * * * /var/PROGRAM/MANAGEMENT/modules/xbash/xglobalssi.sh sync >/dev/null 2>&1
+13---
+14---# BACKUP CROND
+15---
+16---# MONITOR IV
+17---* * * * * /var/PROGRAM/MANAGEMENT/bin/monitor.sh >& /tmp/.monitor.log
+18---
+19---##### PERFORMANCE MONITOR 3.0.0
+20---*/5 * * * * /var/PROGRAM/perf_mon/monitor.sh >/dev/null 2>&1
+21---
+22---## 商家4.0定时任务 # start
+23---# 商城eyp后台
+24---
+25---# 建产品和产品2全量索引之前先执行的定时任务,1点执行
+26---0 1 * * * wget -S --no-proxy --spider -t 1 -T 30 "http://localhost:8082/task/create_product_index_temp.jsp" >/dev/null 2>&1
+27---
+28---# 产品全量索引，每天一次
+29---35 1 * * * wget -S --no-proxy --spider -t 1 -T 30 "http://localhost:8082/servlet/BuildIndex?target=product&type=1&indexFileName=/data/m.pconline/eyp_index/product" >/dev/null 2>&1
+30---
+31---# 产品2全量索引，每天一次
+32---30 2 * * * wget -S --no-proxy --spider -t 1 -T 30 "http://localhost:8082/servlet/BuildIndex?target=product2&indexFileName=/data/m.pconline/eyp_index/product2" >/dev/null 2>&1
+33---
+34---# 店铺全量索引，每天一次
+35---55 2 * * * wget -S --no-proxy --spider -t 1 -T 30 "http://localhost:8082/servlet/BuildIndex?target=shop&type=1&indexFileName=/data/m.pconline/eyp_index/shop/" >/dev/null 2>&1
+36---
+37---# VIP店铺全量索引，每天一次
+38---30 3 * * * wget -S --no-proxy --spider -t 1 -T 30 "http://localhost:8082/servlet/BuildIndex?target=vipShop&type=1&indexFileName=/data/m.pconline/eyp_index/vipShop/" >/dev/null 2>&1
+39---
+40---# 旗舰店商品的产品索引 @2012.1.12
+41---0 4 * * * wget -S --no-proxy --spider -t 1 -T 30 "http://localhost:8082/servlet/BuildIndex?target=fssProduct&indexFileName=/data/m.pconline/eyp_index/fssProduct/"  2>&1
+42---
+43---# 检查服务是否全部审核通过，5分钟一次
+44---*/5 * * * * wget -S --no-proxy --spider -t 1 -T 30  http://localhost:8082/servlet/CheckRequestReviewStatus  2>&1
+45---
+46---# 执行服务全部审核通过的服务，停止到期服务，计划15分钟一次，和上一个任务的时间错开
+47---2-57/5 * * * * wget -S --no-proxy --spider -t 1 -T 30  http://localhost:8082/servlet/BatchRequestExecutor  2>&1
+48---
+49---# 自动重新设定错误服务 ，4小时执行一次
+50---2 */4 * * * wget -S --no-proxy --spider -t 1 -T 30  http://localhost:8082/servlet/BatchAutoResetErrorRequest  2>&1
+51---
+52---# 更新产品库数据,执行groovy脚本
+53---30 21 * * * /data/PRG/crond_grovvy/sync_pdl_product_groovy.sh >/data/logs/sync_pdl_product_groovy.log 2>&1
+54---
+55---# 对不是马上有效的充值卡充值到用户帐号，每天凌晨一次
+56---3 1 * * * wget -S --no-proxy --spider -t 1 -T 30  http://localhost:8082/servlet/ProcessCardcharge >/dev/null 2>&1
+57---
+58---# 计算公司VIP情况，计划是每天一次
+59---2 4,12,19 * * * wget -S --no-proxy --spider -t 1 -T 30  http://localhost:8082/servlet/CheckCompanyServiceVIP >/dev/null 2>&1
+60---
+61---# 计算公司排名，计划是每天一次
+62---20 7 * * * wget -S --no-proxy --spider -t 1 -T 30  http://localhost:8082/servlet/CalCompanyActiveRank >/dev/null 2>&1
+63---
+64---# 处理过期商情 ，每天一次
+65---3 23 * * * wget -S --no-proxy --spider -t 1 -T 30  http://localhost:8082/servlet/ProcessOvertimeNews >/dev/null 2>&1
+66---
+67---# 处理过期商家价格，每天一次
+68---33 4 * * * wget -S --no-proxy --spider -t 1 -T 30  http://localhost:8082/servlet/ProcessOvertimePrice >/dev/null 2>&1
+69---
+70---# 自动删除一个星期前没有被通过的请求,每天一次
+71---52 4 * * * wget -S --no-proxy --spider -t 1 -T 30  http://localhost:8082/servlet/ProcessInvalidRequest >/dev/null 2>&1
+72---
+73---# 每周四一次
+74---12 5 * * 4 wget -S --no-proxy --spider -t 1 -T 30  http://localhost:8082/servlet/UpdateProductMarketPrice >/dev/null 2>&1
+75---
+76---# 有个增值的新功能提供给商家,不过限制每天只能使用5次,所以每天要重置一次 by 建中
+77---43 5 * * * wget -S --no-proxy --spider -t 1 -T 90 http://localhost:8082/servlet/UpdateUser >/dev/null 2>&1
+78---
+79---# 产品价更新到商城商品指导价
+80---12 6 * * * wget -S --spider -t 1 -T 30  http://localhost:8082/task/update_market_price.jsp >/dev/null 2>&1
+81---
+82---# 经销商主页-->跑最新渠道消息的页面缓存 by 陈寅乐 @2010.7.27
+83---32 6,12,17 * * * wget -S --spider -t 1 -T 30  http://localhost:8082/task/update_news_hot.jsp >/dev/null 2>&1
+84---
+85---# 商库的广告请求处理 by 陈寅乐 @2010.10.26
+86---1-59/15 * * * * wget -S --spider -t 1 -T 30  http://localhost:8082/task/local_request_status_handle.jsp >/dev/null 2>&1
+87---
+88---# 每周日，凌晨7点
+89---2 7 * * 7 wget --spider -t 1 -T 30 "http://localhost:8082/task/update_company_year_limit.jsp" >/dev/null 2>&1
+90---
+91---# 处理完成状态的并且7天都没有评价的订单，每天凌晨跑一次: 只需一台执行
+92---#3 3 * * * wget --spider -t 1 -T 30 http://localhost:8082/servlet/BatchOrderRate >/dev/null 2>&1
+93---
+94---# 商品相关的旧数据清理 @2011.11.8 陈寅乐
+95---32 22 * * * wget --spider -t 1 -T 30 "http://localhost:8082/task/delete_useless_product_record.jsp?delLimitCount=15000&delDate=2012-09-20" >/dev/null 2>&1
+96---
+97---# 每月清理支付宝回调日志
+98---#0 0 1 * * cat /dev/null >/data/web/m.pconline/alipay_log/notify/log.txt
+99---
+100---## 商家4.0定时任务 # end
+101---
+102---8 8 * * * crontab -l |awk '/# start/,/ end/' >/data/239.96.crond.root.txt
+103---
+104---#### it商城-Google购物搜索xml # start
+105---#32 5 1,15 * * /data/itshop/start_build.sh >/dev/null 2>&1
+106---#32 8 1,15 * * /data/itshop/start_send.sh >/dev/null 2>&1
+107---#### it商城-Google购物搜索xml # end
+108---
+109---4 8 * * * find /data/BAK/ -ctime +30 -exec rm -fv {} \; >/dev/null 2>&1
+110---6 5 */3 * * cat /dev/null >/data/PRG/resin-pro-3.1.4_pconline-eypb/logs/access.log
+111---30 23 * * * /usr/bin/find /data/PRG/resin-pro-3.1.4_pconline-eypb/log/* -name "*.log.*" -mtime +29 -exec rm -rf {} \;
