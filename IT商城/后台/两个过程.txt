@@ -1,0 +1,89 @@
+--select create_cproduct_idx_temp()
+================ # start ================
+CREATE OR REPLACE FUNCTION "cyp_nw_app"."create_cproduct_idx_temp"()
+  RETURNS "pg_catalog"."void" AS $BODY$
+begin
+	begin
+		TRUNCATE ent_company_product_idx_temp;
+		insert into ent_company_product_idx_temp(
+			online_flag, user_name, domain_name, id, warranty, company_id, seller_total_rate, product_id, count,
+			start_date, end_date, vip_rank, short_name, star, weight, price_area_id, price , last_update_date, index_data_update_time, address_province,
+			address_city, address_district, address_detail, phone, address, mall_name, address_district_id, mall_id, flagshop )
+		select t.online_flag,u.name as user_name,c.domain_name,t.company_product_id as id,
+			t.warranty,t.user_id as company_id,u.seller_total_rate,t.product_id,t.count,t.start_date,
+			t.end_date,c.vip_rank,c.short_name,c.star,c.weight,c.price_area_id,t.retail_price as price,
+			t.last_update_date,t.index_data_update_time,
+			c.address_province, c.address_city, c.address_district,c.address_detail,c.phone,c.address,
+			mall.name as mall_name, place.place_id as address_district_id, mall.id as mall_id, 0
+		from
+			ent_product_item t inner join ent_company c on t.user_id=c.id
+			inner join ent_user u on c.id=u.id
+			left join ent_mall mall on c.mall_id=mall.id
+			left join ENT_PROVINCE_CITY place on c.address_district=place.id and c.address_city=place.parent
+		where
+			u.status=1 and c.status=1 and t.start_date <= now() and t.end_date >=now() and t.status<2 and t.sell_status=1 and t.product_id>0;
+
+		update ent_company_product_idx_temp set flagshop = getProductFlagShipAd(product_id, company_id)
+		where company_id in (select company_id from ent_flag_ship_store_ad where service_id='flag_ship_store');
+
+		insert into ent_company_product_idx_result(idx_type) values('product');
+
+	EXCEPTION  when plpgsql_error then
+		rollback;
+	end;
+end;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100
+================ # end ================
+
+
+--select create_product2_idx_temp()
+================ # start ================
+CREATE OR REPLACE FUNCTION "cyp_nw_app"."create_product2_idx_temp"()
+  RETURNS "pg_catalog"."void" AS $BODY$
+begin
+
+	begin
+		TRUNCATE ent_company_product2_idx_tmp;
+		TRUNCATE ent_company_product2_idx_temp_1;
+		TRUNCATE ent_company_product2_idx_tmp2;
+		TRUNCATE ent_company_product2_idx_temp_products;
+
+		insert into ent_company_product2_idx_tmp(product_id, warranty, av)
+			select product_id,warranty,avg(retail_price) as av from ent_product_item
+			where warranty is not null and sell_status = 1 and start_date <= now() and end_date >= now() and
+		       status in (0,1) and product_id > 0 group by product_id,warranty  ;
+
+		insert into ent_company_product2_idx_temp_1(product_id, user_id, price, sold_count, visit_count)
+			select t1.product_id, t1.user_id, t1.retail_price as price, t1.sold_count, t4.count as visit_count
+			from
+				ent_product_item t1 inner join ent_user t2 on t1.user_id = t2.id
+				inner join ent_company t3 on t1.user_id = t3.id
+				left join ent_company_product_counter t4 on t1.company_product_id = t4.company_product_id
+			where
+				t1.retail_price > 0  and t2.status = 1 and t3.status = 1 and t1.start_date <= now() and t1.end_date >= now() and t1.status<2
+				and t1.sell_status = 1 and t1.product_id > 0;
+
+		insert into ent_company_product2_idx_tmp2(product_id, qg_price, dp_price)
+			select
+				tmp.product_id, round(sum(case tmp.warranty when '全国联保' then av else 0 end)) as qg_price,
+				round(sum(case tmp.warranty when '店铺三包' then av else 0 end)) as dp_price
+			from ent_company_product2_idx_tmp tmp group by tmp.product_id ;
+
+		insert into ent_company_product2_idx_temp_products(product_id, shop_count, price_begin, price_end, price_avg, total_sold_count, total_visit_count)
+			select product_id, count(user_id) as shop_count, round(avg(price)) as price_begin, max(price) as price_end,
+		       round(avg(price)) as price_avg, sum(sold_count) as total_sold_count, sum(visit_count) as total_visit_count
+			from ent_company_product2_idx_temp_1 group by product_id;
+
+		insert into ent_company_product_idx_result(idx_type) values('product2');
+
+	EXCEPTION  when plpgsql_error then
+		rollback;
+	end;
+
+end;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100
+================ # end ================

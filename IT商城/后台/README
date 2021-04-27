@@ -24,3 +24,22 @@
 
  --IP
  192.168.239.96:8082
+
+ --问题定位
+ 192.168.239.96:8082/task/create_product_index_temp.jsp
+ 执行sql和过程时出了问题: org.postgresql.util.PSQLException: ERROR: permission denied for schema pglogical
+ 应用没有权限 执行 TRUNCATE
+
+
+ --解决
+ 用 DELETE FROM 替代 TRUNCATE
+ 让DBA查看相关sql和过程是否执行成功
+
+
+ ================ # start ================
+ select * from ent_product_item where product_id = 1371145
+ https://m.pconline.com.cn/p/pid1371145.html
+
+ select * from ent_product_item where product_id = 1122447
+ https://m.pconline.com.cn/p/pid1122447.html
+ ================ # end ================
