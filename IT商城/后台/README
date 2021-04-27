@@ -36,6 +36,10 @@
  让DBA查看相关sql和过程是否执行成功
 
 
+ --todo
+ 还有一个TRUNCATE
+
+
  ================ # start ================
  select * from ent_product_item where product_id = 1371145
  https://m.pconline.com.cn/p/pid1371145.html
