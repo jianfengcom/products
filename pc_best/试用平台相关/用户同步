@@ -1,24 +1,24 @@
---Í¬²½½Ó¿Ú
+--åŒæ­¥æ¥å£
 http://local.pconline.com.cn:9991/intf/try/syncUser.jsp?start=2021-02-09&end=2021-04-13
 https://best.pconline.com.cn/intf/try/syncUser.jsp?start=2021-02-09&end=2021-04-13
 
---½â¾ö
+--è§£å†³
 intf/try/syncUser.jsp
 
---ÎÊÌâ¸ÅÊö
-ÓÃ»§µÇÂ¼ÊÔÓÃÆ½Ì¨(https://try.pconline.com.cn/)ºó, µã¿ªÖÚ²â²úÆ·Ò³(https://try.pconline.com.cn/act-2641.html#ad=8462), ³öÏÖ404,
-Ô­ÒòÊÇÊÔÓÃÓÃ»§±í(try_user)Ã»ÓĞ¸ÃÓÃ»§µÄ¶ÔÓ¦ÓÃ»§,
+--é—®é¢˜æ¦‚è¿°
+ç”¨æˆ·ç™»å½•è¯•ç”¨å¹³å°(https://try.pconline.com.cn/)å, ç‚¹å¼€ä¼—æµ‹äº§å“é¡µ(https://try.pconline.com.cn/act-2641.html#ad=8462), å‡ºç°404,
+åŸå› æ˜¯è¯•ç”¨ç”¨æˆ·è¡¨(try_user)æ²¡æœ‰è¯¥ç”¨æˆ·çš„å¯¹åº”ç”¨æˆ·,
 
---Á÷³Ì
-RabbitMQ µÄ¼àÌıÆ÷ ¼àÌı×Å"mq.user.queue"¶ÓÁĞ, Ò»µ©GeliDao.update(User) »ò GeliDao.create(User), ¾Í·¢ËÍÏûÏ¢
-·¢ËÍ¶Ë:cn.pconline.best.aop.UserChangeAspect.after(JoinPoint pjp)
-½ÓÊÕ¶Ë(pc_try):cn.pconline.pctry.mq.SyncUpdateUserListener.onMessage(Message msg)
+--æµç¨‹
+RabbitMQ çš„ç›‘å¬å™¨ ç›‘å¬ç€"mq.user.queue"é˜Ÿåˆ—, ä¸€æ—¦GeliDao.update(User) æˆ– GeliDao.create(User), å°±å‘é€æ¶ˆæ¯
+å‘é€ç«¯:cn.pconline.best.aop.UserChangeAspect.after(JoinPoint pjp)
+æ¥æ”¶ç«¯(pc_try):cn.pconline.pctry.mq.SyncUpdateUserListener.onMessage(Message msg)
 
---´íÎóÎ»ÖÃ(pc_try)
+--é”™è¯¯ä½ç½®(pc_try)
 user = userService.find( userId );
 long userId = userService.getUser( account );
 
---´íÎóÈÕÖ¾
+--é”™è¯¯æ—¥å¿—
 org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
 at cn.pconline.pctry.entity.Apply.getUser
 
@@ -27,3 +27,7 @@ RabbitMQ
 @After("execution(* org.gelivable.dao.GeliDao.update(java.lang.Object)) " +
     "|| execution(* org.gelivable.dao.GeliDao.update(java.lang.Object, java.lang.String)) " +
     "|| execution(* org.gelivable.dao.GeliDao.create(java.lang.Object))")
+
+--ç”¨æˆ·è¡¨
+(pc_try):SELECT * FROM try_user WHERE userid = 50969579
+SELECT * FROM pcbest_user WHERE userId = 50969579
