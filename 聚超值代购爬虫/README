@@ -1,0 +1,12 @@
+--Caused by: java.lang.ClassNotFoundException: org.postgresql.Driver
+D:\java_set\pc\resin-pro-3.1.8\lib
+加入 postgresql-9.2-1002.jdbc4.jar 包
+
+
+
+
+
+
+
+
+

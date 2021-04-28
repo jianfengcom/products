@@ -1,0 +1,26 @@
+================ # start ================
+local.pconline.com.cn:9991/intf/topic/getMallUrlInfo.jsp?url=https://detail.tmall.com/item.htm?id=639677715384
+local.pconline.com.cn:9991/intf/topic/getMallUrlInfo.jsp?url=https://item.jd.com/100018768506.html
+
+--线上
+http://192.168.11.208:8001/intf/topic/getMallUrlInfo.jsp?url=https://item.jd.com/100018768506.html
+
+--线上
+https://bestcrawl.pconline.com.cn/intf/topic/getMallUrlInfo.jsp?url=https://item.jd.com/100018768506.html
+
+--线上(聚超值)
+https://best.pconline.com.cn/intf/capture/getMallUrlInfo.jsp?url=https://item.jd.com/100018768506.html
+================ # end ================
+
+
+--天猫(不设置代理也可以访问)
+http://192.168.11.208:8001/intf/topic/getMallUrlInfo.jsp?url=https://detail.tmall.com/item.htm?id=639677715384
+
+
+
+
+
+
+
+
+
