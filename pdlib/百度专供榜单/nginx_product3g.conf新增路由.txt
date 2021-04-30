@@ -1,10 +1,13 @@
 --配置文件路径
 /data/PRG/nginx_product3g/conf/nginx_product3g.conf
 
+--天梯图 - 相关产品页
+ladderId, brandId, optionId, productId, pageSize
 
 ================ 新增 start ================
 location ~ ^/product/.*\.html {
     rewrite ^/product/top/baidu/c(\d+)\.html$ /baidu/top/baidu_spec.jsp?cId=$1 break;
+    rewrite ^/product/tiantitu/aboutProduct/l(\d+)_b(\d+)_o(\d+)_p(\d+)_p(\d+)\.html$ /tiantitu/aboutProduct.jsp?ladderId=$1&brandId=$2&optionId=$3&productId=$4&pageSize=$5 break;
     proxy_next_upstream http_502 http_504 error timeout invalid_header;
     proxy_pass http://PRODUCT3G;
     proxy_set_header   X-Real-IP        $remote_addr;
