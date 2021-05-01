@@ -1,0 +1,70 @@
+--后台
+http://cosme.pclady.com.cn/admin/login.jsp
+
+--前台
+https://cosme.pclady.com.cn/product/178294.html
+
+--
+chenjianfeng1
+183191Cjf2
+
+
+
+
+
+--批量点评列表
+参数: 产品ID
+http://cosme.pclady.com.cn/admin/commentAuto/list.jsp?productId=178294&name=&status=
+
+--批量点评
+参数: 任务ID
+http://cosme.pclady.com.cn/admin/commentAuto/listContent.jsp?id=651
+SELECT * FROM cs_comment_auto WHERE id = 651
+select count(id) from cs_comment_auto_content where commentAutoId = 651 AND publishStatus = 1 AND status = 1    // 480喔
+publishStatus==0    未发布
+publishStatus==1    已发布
+publishStatus==2    中断
+
+
+--网友点评(24) todo
+https://cosme.pclady.com.cn/product_comment_list/178294.html
+
+--批量点评 和 网友点评(24) 是一致的
+
+
+
+
+================ 评论索引&淘宝 start ================
+--nginx
+192.168.239.143:6061
+192.168.240.185:6061
+
+--192.168.239.143:6061
+网友点评
+rewrite ^/product_comment_list/(\d+)\.html$ /comment/list.jsp?productId=$1 break;
+QueryResponse baseQueryResponse = searchCommentService.queryResult(null,productId,-1,-1,-1,-1,-1,-1,"id","createAt desc",1,1,false);
+QueryResponse queryResponse = SearchService.getInstance().queryResult(queryStr, returnFields, clusteFieldsStr,fq, sort, start, rows);
+QueryResponse rsp = server.search(index,query);
+cn.pconline.search.common.SolrSearcher
+某种方式把索引推过去
+
+
+
+================ 评论索引&淘宝 end ================
+
+
+
+================ 生成xindex索引文件 start ================    不是它
+/xindex/create_xindex.jsp
+192.168.236.176:6666 (第一台机器)
+
+/data/web/rsync_xindexfile.sh
+================ 生成xindex索引文件 end ================
+
+时尚网-美容点评_
+
+crontabContext.xml
+
+/data/web/pclady-cosme/WEB-INF/crontabContext.xml
+
+

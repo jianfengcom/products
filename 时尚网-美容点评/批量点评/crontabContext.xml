@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+       http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+	
+	<!--定时任务配置 15分钟更新计数器-->
+    <bean id="counterDatabaseUpdateJob"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="counterService" p:targetMethod="updateToDB"/>
+    <bean id="counterDatabaseUpdateTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerBean"
+          p:jobDetail-ref="counterDatabaseUpdateJob"
+          p:cronExpression="0 0/15 2-23 * * ?"/>
+          
+    <!--计数器定时器-每天更新一次历史记录(产品访问量,用户积分,用户绿豆)  昨天，上周，上月 当天-->
+    <bean id="counterDailyUpdateJobDetail"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="counterService" p:targetMethod="dailyUpdate"/>
+    <bean id="counterDailyUpdateTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerBean"
+          p:jobDetail-ref="counterDailyUpdateJobDetail"
+          p:cronExpression="0 16 0 * * ?"/>
+    
+    <!--挑战赛定时器，每天23点50分统计当天结束的挑战赛票数-->
+    <bean id="voteDailyCounter"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="voteService" p:targetMethod="countVote"/>
+    <bean id="voteDailyCounterTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerBean"
+          p:jobDetail-ref="voteDailyCounter"
+          p:cronExpression="0 50 23 */1 * ?"/>
+          
+    <!--导入CMS评测文章定时器，每天4点31分导入昨天新增数据,测试环境下设为每小时导一次-->
+    <bean id="productArticleServiceDailyImport"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="productDetailArticleService" p:targetMethod="articleDataImport"/>
+    <bean id="productArticleServiceDailyImportTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerBean"
+          p:jobDetail-ref="productArticleServiceDailyImport"
+          p:cronExpression="0 31 4 * * ?"/>
+          
+    <!--每半小时更新一次点评数据-->
+    <bean id="updateCommentJob"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="commentIndexTask" p:targetMethod="updateIndex"/>
+    <bean id="updateCommentJobTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerBean"
+          p:jobDetail-ref="updateCommentJob"
+          p:cronExpression="0 5/35 * * * ?"/>
+    
+	<!-- sitemap生成定时器，每晚2点触发 -->
+    <bean id="createSiteMapJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+            p:targetObject-ref="siteMapServiceV2" p:targetMethod="runTask"/>
+    <bean id="createSiteMapTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean"
+            p:jobDetail-ref="createSiteMapJobDetail" p:cronExpression="0 0 2 * * ?"/>
+    
+    <!--google购物搜索接口，每晚3点触发-->
+    <bean id="createDataFeedJobDetail"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="dataFeedService" p:targetMethod="createDataFeed"/>
+    <bean id="createDataFeedTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerBean"
+          p:jobDetail-ref="createDataFeedJobDetail" p:cronExpression="0 0 3 * * ?"/>
+    
+    <!--每周一11点半更新产品上周评论数,赞踩数量  -->
+    <bean id="updateProductStatOnceaWeekJobDetail"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="productService" p:targetMethod="updateProductStatTask"/>
+    <bean id="updateProductStatOnceaWeekTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerBean"
+          p:jobDetail-ref="updateProductStatOnceaWeekJobDetail"
+          p:cronExpression="0 30 23 ? * 1"/>
+    
+    <!--每天重置用户收藏计分计数favoriteDailyNum(23:30)-->
+    <bean id="resetUserFavoriteNumDailyJobDetail"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="accountStatService" p:targetMethod="resetAccountFavoriteNumTask"/>
+    <bean id="resetUserFavoriteNumDailyTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerBean"
+          p:jobDetail-ref="resetUserFavoriteNumDailyJobDetail"
+          p:cronExpression="0 30 23 * * ?"/>
+    <!--每天同步sns点评达人-->
+    <bean id="popUserDailyUpdateJobDetail"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="accountStatService" p:targetMethod="initUserStarFromSns"/>
+    <bean id="popUserDailyUpdateTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerBean"
+          p:jobDetail-ref="popUserDailyUpdateJobDetail"
+          p:cronExpression="0 0 1 * * ?"/>
+    <!--定时增量更新产品索引，每半个小时更新-->
+    <bean id="indexDataActiveUpdate"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="IndexData" p:targetMethod="updateIndex"/>
+    <bean id="indexDataActiveUpdateTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerBean"
+          p:jobDetail-ref="indexDataActiveUpdate"
+          p:cronExpression="0 10/40 * * * ?"/>
+          
+    <!--每天更新试用活动,0点执行一次,防止未执行0:35再执行一次-->
+    <bean id="updateTrialActivityStateJobDetail"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+            p:targetObject-ref="activityTask" p:targetMethod="updateTrialActivityState"/>
+    <bean id="updateTrialActivityStateTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean"
+            p:jobDetail-ref="updateTrialActivityStateJobDetail" p:cronExpression="0 0/35 0 * * ?"/>
+    
+    <!--每月7号给上月点评前30位的网友发放绿卡-->
+    <bean id="updateTrialMostCommentAndCardJobDetail"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+            p:targetObject-ref="commentListTask" p:targetMethod="mostCommentUserCardByMonth"/>
+    <bean id="updateTrialMostCommentAndCardTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean"
+            p:jobDetail-ref="updateTrialMostCommentAndCardJobDetail" p:cronExpression="0 5 17 3 * ?"/>
+    
+   	<!-- 每一个小时更新一次产品数量和点评数量 -->
+   	<!-- 
+	<bean id="countProductAndCommentJobDetail"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+            p:targetObject-ref="productAndCommentTask" p:targetMethod="countProductAndCommentTask"/>
+    <bean id="countProductAndCommentTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean"
+            p:jobDetail-ref="countProductAndCommentJobDetail" p:cronExpression="0 0 0/1 * * ?"/>
+     -->
+    
+    <!--系统抽取试用申请用户，每天晚上23.50-->
+    <bean id="updateSystemApplyInfoJobDetail"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+            p:targetObject-ref="activityTask" p:targetMethod="updateSystemApplyInfo"/>
+    <bean id="updateSystemApplyInfoTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean"
+            p:jobDetail-ref="updateSystemApplyInfoJobDetail" p:cronExpression="0 55 23 * * ?"/>
+    
+	<bean id="bulid360PicXmlJobDetail"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+            p:targetObject-ref="pic360Service" p:targetMethod="bulidXmlList4Yesterday"/>
+    <bean id="bulid360PicXmlTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean"
+            p:jobDetail-ref="bulid360PicXmlJobDetail" p:cronExpression="0 15 1 * * ?"/>
+	
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref local="counterDatabaseUpdateTrigger"/>
+                <ref local="counterDailyUpdateTrigger"/> 
+                <ref local="voteDailyCounterTrigger" />
+                <ref local="productArticleServiceDailyImportTrigger" />
+                <ref local="updateCommentJobTrigger"/>
+                <ref local="createSiteMapTrigger" />
+                <ref local="createDataFeedTrigger"/>
+                <ref local="updateProductStatOnceaWeekTrigger" />
+                <ref local="resetUserFavoriteNumDailyTrigger"/>
+                <ref local="popUserDailyUpdateTrigger"/>
+            	<ref local="indexDataActiveUpdateTrigger" />
+            	<ref local="updateTrialActivityStateTrigger" />
+            	<ref local="updateTrialMostCommentAndCardTrigger" />
+            	<!-- <ref local="countProductAndCommentTrigger" /> -->
+            	<ref local="updateSystemApplyInfoTrigger" />
+            	<ref local="bulid360PicXmlTrigger" />
+            </list>
+        </property>
+    </bean>   
+</beans>
