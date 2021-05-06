@@ -81,3 +81,8 @@ crontabContext.xml
 192.168.236.176:6666/interface/solr/buildIndex.jsp?inc=2&searchType=1
 192.168.239.143:6666/interface/solr/buildIndex.jsp?inc=2&searchType=1
 
+
+find /data -name 'solr.properties'
+
+buildIndex.jsp
+solr.properties
