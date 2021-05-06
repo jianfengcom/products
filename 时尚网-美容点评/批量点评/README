@@ -61,10 +61,23 @@ cn.pconline.search.common.SolrSearcher
 /data/web/rsync_xindexfile.sh
 ================ 生成xindex索引文件 end ================
 
-时尚网-美容点评_
 
+
+================ crontabContext start ================
 crontabContext.xml
 
 /data/web/pclady-cosme/WEB-INF/crontabContext.xml
+================ crontabContext end ================
 
+
+================ 143 start ================
+32---#solr增量定时任务
+33---*/30 * * * * wget -o /dev/null -O /dev/null "http://127.0.0.1:6666/interface/solr/buildIndex.jsp?inc=2&searchType=1" >/dev/null 2>&1
+34---*/30 * * * * wget -o /dev/null -O /dev/null "http://127.0.0.1:6666/interface/solr/buildProductIndex.jsp?inc=2" >/dev/null 2>&1
+================ 143 end ================
+
+
+--干
+192.168.236.176:6666/interface/solr/buildIndex.jsp?inc=2&searchType=1
+192.168.239.143:6666/interface/solr/buildIndex.jsp?inc=2&searchType=1
 
