@@ -1,0 +1,97 @@
+server:
+  port: 8080
+  tomcat:
+    basedir: pc-brand-mall-api/temp
+  servlet:
+    context-path: /api
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.236.254:3327/pc_baidu_mall?useUnicode=true&characterEncoding=UTF-8&serverTimezone=CTT&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: pc_baidu_mall
+    password: sYd#Qn*HF^rk
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    default-property-inclusion: NON_NULL                    #接口字段为空忽略
+  thymeleaf:
+    cache: false                                            #开发时务必为false
+    enabled: true
+  application:
+    name: pc_brand_mall                                           #为spring应用命名
+  # Redis 配置
+  redis:
+    ## Redis数据库索引（默认为0）
+    database: 0
+    password:
+    ## 连接超时时间（毫秒）
+    timeout: 5000
+    cluster:
+      nodes: 192.168.244.27:6379,192.168.244.27:6380,192.168.244.28:6379,192.168.244.28:6380,192.168.244.29:6379,192.168.244.29:6380
+      max-redirects: 2
+      max-attempts: 3
+    jedis:
+      pool:
+        ## 连接池最大连接数（使用负值表示没有限制）
+        max-active: 50
+        ## 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        ## 连接池中的最大空闲连接
+        max-idle: 8
+        ## 连接池中的最小空闲连接
+        min-idle: 0
+management:
+  endpoints:
+    web:
+      exposure:
+        include: env
+    autoconfig:
+      enabled: false
+  endpoint:
+    health:
+      show-details: never #关闭监控服务
+    shutdown:
+
+################## 应用配置  ###################
+app:
+  domain: http://mall.pconline.com.cn/                #pc端域名
+  wap:
+    domain: http://mall.pconline.com.cn/             #wap端域名
+sys:                                                        #应用代理
+  proxy:
+    ip: 192.168.239.200
+    port: 1080
+
+#集成mybatis框架新增
+mybatis:
+  type-aliases-package: cn.pconline.pcloud.base.entity
+  configuration:
+    map-underscore-to-camel-case: true # 驼峰命名规范 如：数据库字段是  order_id 那么 实体字段就要写成 orderId
+  mapper-locations: classpath*:mappers/*.xml,classpath*:mappers/*/*.xml #配置mybatis xml配置文件
+
+###设置打印mybatis SQL语句
+logging:
+  level:
+     cn.pconline.pcloud.base.dao : debug
+########## 分页插件 ##########
+pagehelper.helper-dialect: mysql
+pagehelper.params-count: countSql
+pagehelper.reasonable: false
+pagehelper.support-methods-arguments: true
+
+########## 通用mapper ##########
+mapper:
+    mappers: cn.pconline.pcloud.base.util.MyMapper
+    not-empty: false
+    identity: MYSQL
+
+#############UPC 指令和地址##############
+upc:
+  app-name: pc_brand_mall
+  root: http://upc.pconline.com.cn
+  command:
+
+taobao:
+  client:
+    url: https://eco.taobao.com/router/rest
+  adzoneId: 110268500499
+  appKey: 28279473
+  appSecret: d97bcf68afb1e80651a3abacd581b146
