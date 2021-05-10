@@ -30,3 +30,18 @@ d97bcf68afb1e80651a3abacd581b146
 --adzone_id
 110268500499
 ================ 淘宝客API end ================
+
+
+================ 亲子 start ================
+把原本的：
+AppKey  28279473
+AppSecret  d97bcf68afb1e80651a3abacd581b146
+adzone_id   110268500499
+
+换成：
+AppKey  32184103
+AppSecret  c8f33bc70d1a6d9e5d33ea1a0915670e
+adzone_id   111361650429
+
+192.168.244.25:8080/api/tbk/dgMaterialOptional?q=https://item.taobao.com/item.htm?id=571660032981
+================ 亲子 end ================
