@@ -1,0 +1,19 @@
+--概述
+广州腾环电子设备有限公司 UPS电源 APC(小类 品牌) 三级&终端套红
+https://product.pconline.com.cn/ups_power/apc/
+https://product.pconline.com.cn/ups_power/apc/174853.html
+
+
+--解决
+update PP_AD set COMPANY_COLOR = 'red', COLOR = 'red' where brand_id =  21285 and company_id = 785210;
+update PDL_AD set COMPANY_COLOR = 'red' where brand_id =  21285 and company_id = 785210;
+
+
+--字段
+brand_id    品牌ID    http://pdadmin.pconline.com.cn:9093/product/login.jsp
+company_id  公司ID    http://eyp-admin.pconline.com.cn:8296/env/login.htm
+
+
+--同步
+表PP_AD
+表PDL_AD
