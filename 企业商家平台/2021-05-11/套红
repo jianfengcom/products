@@ -17,3 +17,15 @@ company_id  公司ID    http://eyp-admin.pconline.com.cn:8296/env/login.htm
 --同步
 表PP_AD
 表PDL_AD
+
+
+================ todo start ================
+报价库 https://product.pconline.com.cn/price_2015/domain.jsp?areaId=1&brandId=21285&qq&time=900&priority&groupType=3&areaIds=,1,2,3,4,12,
+广东省
+<a onclick="loadSite('1','广州');" rel="nofollow" target="_self">
+<a onclick="loadSite('4','深圳');" rel="nofollow" target="_self">
+<a onclick="loadSite('22','东莞');" rel="nofollow" target="_self">
+<a onclick="loadSite('25','佛山');" rel="nofollow" target="_self">
+
+产品库 service2011/price_dealer.jsp
+================ todo end ================

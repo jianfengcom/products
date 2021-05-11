@@ -1,0 +1,97 @@
+--推荐公司加套色
+http://eyp-admin.pconline.com.cn:8296/request/confirmUpdateRequestItem.htm?requestId=1038917&updContractRequest=false
+
+
+--产品库推荐品牌套色
+http://eyp-admin.pconline.com.cn:8296/request/confirmUpdateRequestItem.htm?requestId=1038915&updContractRequest=false
+
+
+--后台入口
+http://eyp-admin.pconline.com.cn:8296/env/login.htm
+服务管理
+查看服务请求
+
+
+--三级 & 终端区分 todo
+报价库
+推荐公司加套色
+
+
+_public_areas.jsp
+price_dealer_box.jsp
+
+
+================ 品牌 start ================
+http://product.pconline.com.cn/pdlib/service2011/price_dealer.jsp?areaId=100&brandId=66549&qq&time=900&priority&groupType=3&areaIds=,1,2,3,4,
+http://pdlib.pconline.com.cn/product/price.do?method=getCompanyJson&areaId=100&brandId=66549&qq&priority&areaIds=,1,2,3,4,
+
+
+https://product.pconline.com.cn/pdlib/service2011/price_dealer.jsp?areaId=1&brandId=21202&qq&time=900&priority&groupType=3&areaIds=,1,2,3,4,
+https://pdlib.pconline.com.cn/product/price.do?method=getCompanyJson&areaId=1&brandId=21202&qq&priority&areaIds=,1,2,3,4,
+
+
+21202	戴尔(DELL)
+21676	联想
+
+地址: 广州=1 深圳=4 东莞=22 佛山=25 珠海=27 中山=33
+price_front: _public_areas.jsp
+
+
+cn.com.pconline.core.product.web.action.ad.PriceAction.getRecommendedCompanyJson()
+
+
+PriceAd
+DbPriceAd
+BaseDbPriceAd
+BaseDbPriceAd
+DbPriceAdPeer
+BaseDbPriceAdPeer
+
+戴尔三级: https://pdlib.pconline.com.cn/product/price.do?method=getCompanyJson&areaId=1&brandId=21202&qq&priority&areaIds=,1,2,3,4,
+867398
+联想三级: https://pdlib.pconline.com.cn/product/price.do?method=getCompanyJson&areaId=1&brandId=21676&qq&priority&areaIds=,1,2,3,4,
+436
+
+永昌丰：服务器 戴尔 三级&终端套红； - 867398
+致荣：服务器 戴尔 终端套红；服务器 联想 三级套红。 - 21676
+
+三级: company_color
+
+
+
+select * from pp_ad where id = 867398, 436
+
+
+update pp_ad set COMPANY_COLOR = 'red' where id in (294526, 294505);
+update pp_ad set COLOR = 'red' where id in (294526, 294506);
+
+select * from pp_ad where company_id in (867398, 436)
+
+
+https://pdlib.pconline.com.cn/product/template2018/product_1.jsp?productId=576944&nossi=true
+
+https://product.pconline.com.cn/pdlib/service2015/brand_dealers_json_js.jsp?brandId=21202&productId=576944&type=6&smallTypeId=20808&areaId=,1,2,3,4,
+https://product.pconline.com.cn/pdlib/service2011/price_dealer.jsp?areaId=1&brandId=21202&qq&time=900&priority&groupType=3&areaIds=,1,2,3,4,
+
+终端页
+https://product.pconline.com.cn/pdlib/service2015/brand_dealers_json_js.jsp?brandId=21202&productId=576944&type=6&smallTypeId=20808&areaId=,1,2,3,4,
+
+
+update PDL_AD set COMPANY_COLOR = 'red' where id in (176941, 176982)
+
+192.168.239.174:8081/intf/tiantitu/product_item.jsp?productId=1124166
+
+
+192.168.239.174:8081/product/repair/apple/mobile/jinhuashi.html
+
+
+小类 服务器: 20808
+品牌 戴尔: 21202
+================ 品牌 end ================
+
+
+public static final int TYPE_LEVEL_2 = 2; //报价索引2级页面
+public static final int TYPE_LEVEL_3 = 3; //报价索引3级页面
+
+pdlib: 报价前台查经销商接口的封装 解决ie6下乱码问题
+service2011/price_dealer.jsp
