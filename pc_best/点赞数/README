@@ -1,0 +1,36 @@
+--
+https://best.pconline.com.cn/youhui/10093909.html
+https://best.pconline.com.cn/index_art.jsp?topicId=10093909
+
+
+================ nginx start ================
+        location ~ ^/(youhui|haitao|faxian|yuanchuang|shaiwu|jingyan)/(\d*)\.html{
+            rewrite ^/youhui/182658.html  http://best.pconline.com.cn/specific/gold_exchange.html  permanent;
+            rewrite /youhui/(\d*).html /index_art.jsp?topicId=$1 break;
+            rewrite /haitao/(\d*).html /haitao_art.jsp?topicId=$1 break;
+            rewrite /faxian/(\d*).html /discovery_art.jsp?topicId=$1 break;
+            rewrite /yuanchuang/(\d*).html /original_art.jsp?topicId=$1 break;
+            rewrite ^/shaiwu/(\d*).html http://best.pconline.com.cn/yuanchuang/$1.html permanent;
+	        rewrite ^/jingyan/(\d*).html http://best.pconline.com.cn/yuanchuang/$1.html permanent;
+
+            proxy_next_upstream http_502 http_504 error timeout invalid_header;
+            proxy_set_header Host $host;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_redirect      off;
+            proxy_connect_timeout 10;
+            proxy_read_timeout 60;
+            proxy_cache_key $host$uri$is_args$args;
+            add_header      X-Cache   '$upstream_cache_status from $server_addr';
+            proxy_pass http://BEST_APP;
+        }
+================ nginx end ================
+
+
+--定位
+index_art.jsp
+art_main_body.jsp
+//js.3conline.com/pconlinenew/data/2017/best/js/art-yh.js
+
+
+https://best.pconline.com.cn/action/topic/like_and_dislike.jsp
