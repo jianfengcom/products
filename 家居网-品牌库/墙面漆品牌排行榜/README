@@ -1,0 +1,12 @@
+--URL
+https://product.pchouse.com.cn/list/c36_a1_40.html?do=2333
+
+
+================ top榜单对应的sql start ================
+select tmp.value from (select lr.value, lr.createby, lr.seq, b.id as bid from lib_all_recommend lr, lib_product_entity e, lib_brand b
+where lr.value = e.id and e.brand_id = b.id and lr.type = 'top' and lr.status = 1 and lr.categoryId = 36) tmp
+order by tmp.seq asc, (case when tmp.createby = 'system' then 0 else 1 end) desc limit 0,12
+
+select lr.value, lr.createby, lr.seq, b.id as bid from lib_all_recommend lr, lib_product_entity e, lib_brand b
+where lr.value = e.id and e.brand_id = b.id and lr.type = 'top' and lr.status = 1 and lr.categoryId = 36
+================ top榜单对应的sql end ================
