@@ -1,0 +1,18 @@
+http://newplay.pconline.com.cn/admin/pcClientMasterSpiderUpgrade.do
+owerId: 0
+checkStatus: 0
+name:
+masterId:
+pcSoftStatus: 2
+begin:
+end:
+
+重点软件升级审核列表
+http://newplay.pconline.com.cn/admin/pcClientMasterSpider4KeyUpgrade.do
+owerId: 0
+checkStatus: 0
+name:
+masterId:
+pcSoftStatus: 2
+begin:
+end:
