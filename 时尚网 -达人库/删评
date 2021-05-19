@@ -1,0 +1,23 @@
+DESC cmt_comment
+
+
+SELECT * FROM cmt_comment WHERE productId = 1237321 AND cmtCommentId IN (1207284, 1207288, 1206843)
+
+
+# 13条点评
+SELECT count(1) FROM cmt_comment WHERE productId = 1237321 and reviewStatus = 1
+
+
+# 时间
+SELECT count(1) FROM cmt_comment WHERE productId = 1237321 and reviewStatus = 1 AND importDate >= '2019-01-01'
+
+
+
+# 给
+SELECT count(1) FROM cmt_comment WHERE reviewStatus = 1 AND importDate >= '2019-01-01 00:00:00'
+UPDATE cmt_comment SET reviewStatus = -519 WHERE reviewStatus = 1 AND importDate >= '2019-01-01 00:00:00'
+
+
+https://product.pconline.com.cn/pdlib/1237321_comment_id1207284.html
+https://product.pconline.com.cn/pdlib/1237321_comment_id1207288.html
+https://product.pconline.com.cn/pdlib/1237321_comment_id1206843.html
