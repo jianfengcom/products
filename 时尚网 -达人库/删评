@@ -1,23 +1,28 @@
-DESC cmt_comment
+================================ pdcmt ================================
 
 
 SELECT * FROM cmt_comment WHERE productId = 1237321 AND cmtCommentId IN (1207284, 1207288, 1206843)
 
-
 # 13条点评
 SELECT count(1) FROM cmt_comment WHERE productId = 1237321 and reviewStatus = 1
 
-
 # 时间
-SELECT count(1) FROM cmt_comment WHERE productId = 1237321 and reviewStatus = 1 AND importDate >= '2019-01-01'
+SELECT count(1) FROM cmt_comment WHERE productId = 1237321 and reviewStatus = 1 AND importDate < '2019-01-01 00:00:00'
+SELECT count(1) FROM cmt_comment WHERE reviewStatus = 1 AND importDate < '2019-01-01 00:00:00'
+
+# 解决
+UPDATE cmt_comment SET reviewStatus = -519 WHERE reviewStatus = 1 AND importDate < '2019-01-01 00:00:00'
 
 
 
-# 给
-SELECT count(1) FROM cmt_comment WHERE reviewStatus = 1 AND importDate >= '2019-01-01 00:00:00'
-UPDATE cmt_comment SET reviewStatus = -519 WHERE reviewStatus = 1 AND importDate >= '2019-01-01 00:00:00'
+================================ 家居网-快问 ================================
+UPDATE fk_question_1 SET status = -31 WHERE status = 1 AND  update_time < '2019-01-01 00:00:00'
+UPDATE fk_question_19 SET status = -31 WHERE status = 1 AND  update_time < '2019-01-01 00:00:00'
 
+UPDATE fk_answer_1 SET status = -31 WHERE status = 1 AND  update_time < '2019-01-01 00:00:00'
+UPDATE fk_answer_99 SET status = -31 WHERE status = 1 AND  update_time < '2019-01-01 00:00:00'
 
-https://product.pconline.com.cn/pdlib/1237321_comment_id1207284.html
-https://product.pconline.com.cn/pdlib/1237321_comment_id1207288.html
-https://product.pconline.com.cn/pdlib/1237321_comment_id1206843.html
+# 问
+http://wenda.pchouse.com.cn/q/5131057.html
+SELECT * FROM fk_question_8 WHERE account_id = 32012150 and id = 5131057
+SELECT * FROM fk_question_8 WHERE account_id = 32012150 and id = 5131057 and update_time <= '2020-05-08 17:00:19'
