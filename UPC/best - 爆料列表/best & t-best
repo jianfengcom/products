@@ -1,0 +1,57 @@
+http://rdtrac.pc.com.cn/upc/wiki/4qa
+
+http://rdtrac.pc.com.cn/upc/wiki/upc%20API%E4%BD%BF%E7%94%A8
+
+http://t-upc.pconline.com.cn/admin/index.jsp
+
+
+================================ best(爆料列表 - 添加爆料 - 1:1封面) ================================
+https://upc.pconline.com.cn/upload_quick.jsp?&time=0.015494489552296153&windowname=1&fileType=Picture&application=pc_best&keepSrc=yes&watermark=/data/pc-config/upc/watermark/pc_best.png&command=1001&command=1003&command=1004&command=1010&command=1011&command=1012&command=1014&command=1017&command=1022&command=1023
+time: 0.015494489552296153
+windowname: 1
+fileType: Picture
+application: pc_best
+keepSrc: yes
+watermark: /data/pc-config/upc/watermark/pc_best.png
+command: 1001
+command: 1003
+command: 1004
+command: 1010
+command: 1011
+command: 1012
+command: 1014
+command: 1017
+command: 1022
+command: 1023
+
+
+================================ t-best(爆料列表 - 更新爆料 - 1:1封面&2:1封面) ================================
+https://t-upc.pconline.com.cn/upload_quick.jsp?&time=0.8145577400358555&windowname=1&fileType=Picture&application=pc_best&keepSrc=yes&command=1001&command=1003&command=1004&command=1010&command=1011&command=1012&command=1014&command=1017&command=1022&command=1023
+time: 0.8145577400358555
+windowname: 1
+fileType: Picture
+application: pc_best
+keepSrc: yes
+command: 1001
+command: 1003
+command: 1004
+command: 1010
+command: 1011
+command: 1012
+command: 1014
+command: 1017
+command: 1022
+command: 1023
+
+https://t-upc.pconline.com.cn/upload_quick.jsp?&time=0.777783665303541&windowname=1&fileType=Picture&application=pc_best&keepSrc=yes&command=1015&command=1020&command=1021
+time: 0.777783665303541
+windowname: 1
+fileType: Picture
+application: pc_best
+keepSrc: yes
+command: 1015
+command: 1020
+command: 1021
+
+http://t-upc.pconline.com.cn/upcfiles/images/upload/upc/tx/pc_best/2105/20/c0/59512633_1621479454077.jpg
+http://t-upc.pconline.com.cn/upcfiles/images/upload/upc/tx/pc_best/2105/20/c0/59512606_1621475833594.jpg
