@@ -1,6 +1,7 @@
 --本地
-local.pconline.com.cn:9991/index.jsp
 local.pconline.com.cn:9991
+local.pconline.com.cn:9991/index.jsp
+local.pconline.com.cn:9991/activity.jsp?activityId=222
 
 
 --log
@@ -21,3 +22,7 @@ try.pconline.com.cn/receivedApply.jsp?activityId=2631
 试用用户表(try_user)没有对应的记录, 调用创建接口
 (best)/intf/user/addUserByAccountId.jsp
 ================ #众测平台页面 end ================
+
+
+================================ 链接 ================================
+https://try.pconline.com.cn/admin/login.jsp
